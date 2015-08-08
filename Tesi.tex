@@ -1,0 +1,145 @@
+\documentclass[a4paper,11pt,openright,twoside]{report} 
+
+% oneside - solo fronte, twoside - fronte retro
+% openright - prima pagina dei capitoli su pagina destra, openany - indifferentemente
+%
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}                 %Pacchetto per inserire i caratteri matematici
+\usepackage{makeidx}                  %Pacchetto per generare l'indice analitico
+%\usepackage[utf8x]{inputenc}          %Pacchetto per poter inserire direttamente nel testo%lettere accentate. Se si scrive in inglese si può commentare
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+
+\usepackage[T1]{fontenc}              %Pacchetto che gestisce l'encoding T1
+
+\usepackage[english,italian]{babel}   %Pacchetto per la sillabazione delle parole
+                                      %in italiano e in inglese
+
+%\usepackage[Sonny]{fncychap}         %Pacchetto per avere diversi tipi di titoli di
+                                      %capitolo diversi. Commentare se si desidera
+                                      %avere i titoli in maniera normale. Gli stili
+                                      %possibili sono 2: Sonny, Lenny
+
+\usepackage{enumitem}
+\usepackage{verbatim}                 %Pacchetti per stampare il codice
+\usepackage{listings}                 %Pacchetti per stampare il codice
+\usepackage{fancyvrb}                 %Pacchetti per stampare il codice
+\usepackage{algorithm}                %Pacchetti per stampare il codice	%Pacchetti per stampare il codice
+\usepackage{algpseudocode}            %Pacchetti per stampare il codice
+\usepackage[babel]{csquotes}
+\usepackage{wrapfig}
+\usepackage{epigraph}
+\usepackage{acronym}
+\usepackage{hyperref}
+\usepackage{graphicx} %gestione immagini, anche vettoriali
+\usepackage{epstopdf} %per utilizzare eps nel file
+\usepackage[position=bottom]{subfig}
+\usepackage[style=authoryear,sorting=nyt,maxcitenames=1,backend=bibtexu]{biblatex}   %%BIBLIOGRAFIA
+\usepackage{titlesec} %%Impostazione nuove sezioni
+%\usepackage{glossaries}
+\usepackage{amsmath} %riferimenti a equazioni
+\usepackage[version=3]{mhchem}
+\usepackage[margin=10pt, font=small, labelfont=bf]{caption}
+
+
+
+\hypersetup{
+pdftitle={},%
+pdfauthor={},%
+pdfsubject={},%
+pdfkeywords={},%
+colorlinks=false,
+pdfborder={0 0 0},
+%linktocpage=true,%
+pageanchor=true
+}                 %Pacchetto per inserire i riferimenti ipertestuali
+\addbibresource{tex/Bibliografia.bib} 
+%
+\oddsidemargin=30pt \evensidemargin=20pt%impostano i margini
+%\hyphenation{sil-la-ba-zio-ne pa-ren-te-si}%serve per la sillabazione: tra parentesi 
+					   %vanno inserite come nell'esempio le parole 
+%					   %che latex non riesce a tagliare nel modo giusto andando a capo.
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%comandi per l'impostazione
+                                        %   della pagina, vedi il manuale
+                                        %   della libreria fancyhdr
+                                        %   per ulteriori delucidazioni
+\pagestyle{fancy}\addtolength{\headwidth}{20pt}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection \ #1}{}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\linespread{1.3}                        %comando per impostare l'interlinea
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%definisce nuovi comandi
+%
+\makeindex                            %Comando per generare l'indice. Togliere il simbolo percento davanti qualora si voglia avere l'indice analitico                              
+%\makeglossaries
+
+\numberwithin{equation}{section} %imposta la numerazione automatica delle equazioni
+\newcommand\addtag{\refstepcounter{equation}\tag{\theequation}} %prova: numerazione formule
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RIFERIMENTI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\figref}[2][{}]{\hyperref[#2]{\figurename~\ref{#2}#1}} %riferimento a figura
+\newcommand{\tabref}[2][{}]{\hyperref[#2]{\tablename~\ref{#2}#1}} %riferimento a tabella
+              
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}} %note a pie di pagina, nuova numerazione
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\theta}{\vartheta}  %Definizione nuovi caratteri greci
+\renewcommand{\phi}{\varphi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{tex/Dedica.tex}
+
+\setcounter{tocdepth}{2} 			 %Profondità indice
+\setcounter{secnumdepth}{3}
+
+\pagenumbering{Roman}                   %serve per mettere i numeri romani
+\input{tex/Sommario.tex}
+%\printglossaries
+
+\input{tex/Indice.tex}               % non deve essere presente nell'indice
+%\input{tex/Terminologia.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
+\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+\pagenumbering{arabic}                  %mette i numeri arabi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tex/Introduzione.tex}
+\input{tex/Fluidodinamica.tex}
+\input{tex/Foamer.tex}
+\input{tex/ImpiantiNUOVAPROPOSTA.tex}
+\input{tex/Piggaggio.tex}
+\input{tex/Test.tex}
+\input{tex/Conclusioni.tex}
+\input{tex/Bibliografia.tex}
+\input{tex/Ringraziamenti.tex}
+         
+
+
+\end{document}
