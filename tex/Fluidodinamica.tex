@@ -1,24 +1,25 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Moto dei fluidi nelle condotte in pressione}\label{ch:fluidodinamica}
 \chaptermark{Fluidi in condotta}
+La fluidodinamica è un ramo della meccanica del continuo e studia il comportamento di liquidi e gas in movimento. Si parla di termofluidodinamica quando, in alcuni processi, le grandezze e i fenomeni termici sono particolarmente rilevanti. Lo studio del moto dei fluidi in condotta riveste notevole importanza nella progettazione di qualsiasi impianto industriale, dove il calcolo delle perdite di carico rappresenta il nodo cruciale per un'appropriata interpretazione e risoluzione del problema. Solitamente in ambito tecnico non si fa riferimento a fluidi monofase, bensì a fluidi multifase, dove l'iterazione tra fasi gioca un ruolo fondamentale e il calcolo delle variabili è possibile solo grazie a modelli complessi e fortemente dipendenti dalle condizioni al contorno. 
 \section{Il concetto di fluido e nozioni fondamentali}
-Per \textit{fluido} si intende \textit{un materiale che non è in grado di reagire a sforzi di taglio statici}. Non si trasmettono quindi, in condizioni di quiete, forze parallele attraverso una qualunque superficie ideale tracciata nel fluido. Attraverso la stessa superficie possono trasmettersi forze perpendicolari, la cui risultante è nota come \textit{pressione}.\\
-La \textit{densità} di un fluido \(\rho\) è definita come la massa dell'unità di volume. Si definisce \textit{densità relativa \(\rho_r\)} il rapporto tra la densità del materiale e quella dell'acqua a pressione atmosferica e temperatura a 4°C. Il \textit{peso specifico} \(\gamma\) è il peso dell'unità di volume. Per \textit{volume specifico} \(v\) si intende il volume dell'unità di massa, cioè l'inverso della densità. \\
-In condizioni \textit{dinamiche} un fluido, al contrario delle condizioni di quiete, reagisce a sforzi di taglio. Si consideri un meato (intercapedine in cui è presente un piccolo strato di fluido) di altezza \(h\), delimitato tra due pareti piane indefinite, una in quiete e l'altra in movimento con velocità \(w\) (\figref{fig:meato}).
-\begin{figure}[!htbp] %Immagine meato
+Per fluido si intende un materiale che non è in grado di reagire a sforzi di taglio statici. Non si trasmettono quindi, in condizioni di quiete, forze parallele attraverso una qualunque superficie ideale tracciata nel fluido. Attraverso la stessa superficie possono trasmettersi forze perpendicolari, la cui risultante è nota come \textit{pressione}.\\
+La densità di un fluido \(\rho\) è definita come la massa dell'unità di volume. Si definisce densità relativa \(\rho_r\) il rapporto tra la densità del materiale e quella dell'acqua a pressione atmosferica e temperatura a 4°C. Il peso specifico \(\gamma\) è il peso dell'unità di volume. Per volume specifico \(v\) si intende il volume dell'unità di massa, cioè l'inverso della densità. \\
+In condizioni dinamiche un fluido, al contrario delle condizioni di quiete, reagisce a sforzi di taglio. Si consideri un meato (intercapedine in cui è presente un piccolo strato di fluido) di altezza \(h\), delimitato tra due pareti piane indefinite, una in quiete e l'altra in movimento con velocità \(w\) (\figref{fig:meato}).
+\begin{figure}[htbp] %Immagine meato
     \centering
-    \includegraphics[width=0.45\textwidth]{fig/fluidodinamica/meato.eps}
+    \includegraphics[width=0.6\textwidth]{fig/fluidodinamica/meato.eps}
     \caption{Azioni esercitate da un fluido tra due superfici in moto relativo \parencite{guglielmini2004lezioni}.} 
     \label{fig:meato}
 \end{figure}
 Il moto relativo tra fluido e parete è nullo, nel meato si crea quindi un campo di velocità triangolare, dove i piani di fluido scorrono l'uno sull'altro. Questo genera una forza resistente sulla superficie della parete superiore in moto. Indicando con \(A\) l'area della superficie di contatto tra  la lastra e il fluido, la forza resistente \(F\) è espressa in modulo dalla legge di Newton:
 \[F= \mu \; A \; \frac{dw}{dy} \implies \tau_{yx} = \frac{F}{A} = \mu \; \frac{dw}{dy} \addtag \label{eq:newton} \]
-in cui \(\mu\) è una proprietà del fluido detta \textit{viscosità dinamica} e \(\tau_{yx}\) rappresenta lo \textit{sforzo di taglio viscoso} ovvero la forza che agisce per unità di area su  una superficie interna al fluido in direzione parallela a tale superficie, e \(\frac{dw}{dy}\) è la derivata della velocità del fluido rispetto alla componente verticale del moto. Lo sforzo di taglio è proporzionale alla viscosità e al gradiente di velocità. Il rapporto è direttamente proporzionale se i fluidi sono classificabili come \textit{newtoniani}, cioè se la viscosità è indipendente dallo sforzo viscoso per determinate condizioni di temperatura e pressione. Per i fluidi \textit{non newtoniani} vale la seguente formula:
+in cui \(\mu\) è una proprietà del fluido detta viscosità dinamica e \(\tau_{yx}\) rappresenta lo sforzo di taglio viscoso ovvero la forza che agisce per unità di area su  una superficie interna al fluido in direzione parallela a tale superficie, e \(\frac{dw}{dy}\) è la derivata della velocità del fluido rispetto alla componente verticale del moto. Lo sforzo di taglio è proporzionale alla viscosità e al gradiente di velocità. Il rapporto è direttamente proporzionale se i fluidi sono classificabili come newtoniani, cioè se la viscosità è indipendente dallo sforzo viscoso per determinate condizioni di temperatura e pressione. Per i fluidi non newtoniani vale la seguente formula:
 \[\frac{dw}{dy}=\frac{\tau}{\mu(\tau)}\addtag\label{eq:newtoniani}\]
 A seconda dell'andamento della funzione \(\mu(\tau)\) i fluidi possono essere classificati come "pseudo plastici" o "dilatanti" (\figref{fig:newtoniani}).
-\begin{figure}[!htbp] %Immagine reologia di un fluido
+\begin{figure}[htbp] %Immagine reologia di un fluido
     \centering
-    \includegraphics[width=0.40\textwidth]{fig/fluidodinamica/newtoniani.eps}
+    \includegraphics[width=0.6\textwidth]{fig/fluidodinamica/newtoniani.eps}
     \caption{Reologia di un fluido nel caso di fluidi newtoniani e non newtoniani \parencite{guglielmini2004lezioni}.} 
     \label{fig:newtoniani}
 \end{figure}
@@ -27,10 +28,10 @@ A seconda dell'andamento della funzione \(\mu(\tau)\) i fluidi possono essere cl
 La rappresentazione analitica del moto di un fluido è assai complessa e richiede l'impiego di modelli al fine di semplificare la descrizione qualitativa e quantitativa di tale moto. Vengono indicate le tre figure fondamentali per la descrizione del moto di un fluido:
 \begin{itemize}
 \item \textbf{traiettoria di una particella}: il luogo dei punti occupati in tempi successivi dalla stessa particella fluida;
-\item \textbf{linea di corrente} (o \textit{linea di flusso}): è una linea che ha per tangente il vettore velocità in ogni punto;
+\item \textbf{linea di corrente} (o \textbf{linea di flusso}): è una linea che ha per tangente il vettore velocità in ogni punto;
 \item \textbf{linea di fumo}: è il luogo dei punti occupati, ad un dato istante, dalle particelle che sono passate per uno stesso punto.
 \end{itemize}
-Nel caso di moto permanente questi  tre luoghi geometrici coincidono. Si definisce \textit{vena fluida} o \textit{filetto di corrente} l'insieme delle traiettorie le cui sezioni trasversali hanno velocità (perpendicolare alla sezione stessa), pressione, temperatura e volume specifico costanti.\\
+Nel caso di moto permanente questi  tre luoghi geometrici coincidono. Si definisce vena fluida o filetto di corrente l'insieme delle traiettorie le cui sezioni trasversali hanno velocità (perpendicolare alla sezione stessa), pressione, temperatura e volume specifico costanti.\\
 Il modello di riferimento è quello di moto uni- o monodimensionale e si assumono condizioni di regime permanente di massa e termodinamico. In termini fisici il modello deve rispettare i principi di:
 \begin{itemize}
 \item \textbf{conservazione della massa};
@@ -50,7 +51,7 @@ L'\textit{equazione di continuità}, o \textit{bilancio di massa}, può scrivers
 Si consideri un filetto di corrente in regime permanente a portata massica costante. Si consideri un volume di controllo C.V. (dall'inglese \textit{Control Volume}) compreso tra le sezioni 1 e 2, di massa $m$ più la massa $dm$ che attraversa la sezione 1 nel tempo $d\tau$. Di conseguenza nello stesso intervallo di tempo $d\tau$ una pari massa $dm$ attraversa la sezione 2. La variazione di quantità di moto è pari al prodotto della massa $dm$ per la differenza delle velocità tra le sezioni 1 e 2. Tale variazione di quantità di moto eguaglia l'impulso delle forze agenti sul C.V. (\figref{fig:quantitamoto}):
 \[\sum{F\;d\tau}=dm(w_2-w_1)\qquad \textrm{ovvero}\qquad \sum{F}=\dot{m}(w_2-w_1)\]
 dove \(\sum{F}\) è la risultante delle forze agenti sul C.V. nella direzione del moto.
-\begin{figure}[!htbp] %Immagine layout di mandata
+\begin{figure}[htbp] %Immagine layout di mandata
     \centering
     \includegraphics[width=\textwidth]{fig/fluidodinamica/quantitamoto.eps}
     \caption{Conservazione della quantità di moto a regime permanente.} 
@@ -349,7 +350,8 @@ Il punto cruciale del calcolo delle cadute di pressione per un flusso bifase ris
 \[\Delta p_a = \dfrac{2 \; f_{tot} \; j_{tot}^2}{\rho_{tot}} \; \dfrac{l}{D} \addtag \label{eq:darcyweisbachfanning2f} \]
 Si può esprimere il numero di Fanning tramite la \eqref{eq:fanningreynolds}, il numero di Reynolds per mezzo della \eqref{eq:reynolds}. Come viscosità, parametro utile al calcolo del numero di Reynolds, può essere scelta quella della fase liquida oppure una media pesata in base al titolo di vapore \(x\):
 \[\mu_{tot} =x \; \mu_G + (1+x) \; \mu_L \addtag \]
-
+\\
+\'E importante acquisire le basi della fluidodinamica multifase per capire come le iterazioni tra le diverse fasi e le perdite di carico definiscano il flusso che si instaura in condotta. L'ingegneria petrolifera ha cercato negli anni di affinare i modelli interpretativi, così da avvicinare le stime di produzione di un pozzo ai trend reali. In particolar modo, la corretta interpretazione del moto multifase per i pozzi a gas determina la tipologia e la configurazione di sistemi per l'aumento di portata o la diminuzione delle perdite di carico. Si intuisce quindi che l'aumento delle performance è legato alla veridicità del modello calcolato. Nel prossimo capitolo sono trattati i problemi di un pozzo a gas legati a condizioni di flusso multifase e le tecnologie oggi utilizzate per ovviare al calo di rendimento nel tempo.
 %\section{Moto dei fluidi comprimibili in condotta a sezione variabile}
 %\subsection{Velocità del suono}
 %\subsection{Equazione di Hugoniot e numero di Mach}

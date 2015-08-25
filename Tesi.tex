@@ -45,8 +45,11 @@
 \usepackage{amsmath} %riferimenti a equazioni
 \usepackage[version=3]{mhchem}
 \usepackage[margin=10pt, font=small, labelfont=bf]{caption}
-
-
+\usepackage[load-configurations = abbreviations]{siunitx} %pacchetto per le unità di misura
+\sisetup{per-mode = symbol} %specifica l'impiego dello slash per unità con esponente negativo (e.g. lt/h)
+\usepackage[gen]{eurosym} %pacchetto simbolo euro ufficiale
+\DeclareUnicodeCharacter{20AC}{\euro{}} %definizione simbolo € come "euro"
+\usepackage[]{xfrac} %pacchetto per frazioni obblique
 
 \hypersetup{
 pdftitle={},%
@@ -98,7 +101,6 @@ pageanchor=true
 \newcommand{\tabref}[2][{}]{\hyperref[#2]{\tablename~\ref{#2}#1}} %riferimento a tabella
               
 %\renewcommand{\thefootnote}{\fnsymbol{footnote}} %note a pie di pagina, nuova numerazione
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\epsilon}{\varepsilon}
 \renewcommand{\theta}{\vartheta}  %Definizione nuovi caratteri greci
