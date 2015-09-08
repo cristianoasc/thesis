@@ -19,7 +19,7 @@ in cui \(\mu\) è una proprietà del fluido detta viscosità dinamica e \(\tau_{
 A seconda dell'andamento della funzione \(\mu(\tau)\) i fluidi possono essere classificati come "pseudo plastici" o "dilatanti" (\figref{fig:newtoniani}).
 \begin{figure}[htbp] %Immagine reologia di un fluido
     \centering
-    \includegraphics[width=0.6\textwidth]{fig/fluidodinamica/newtoniani.eps}
+    \includegraphics[width=0.5\textwidth]{fig/fluidodinamica/newtoniani.eps}
     \caption{Reologia di un fluido nel caso di fluidi newtoniani e non newtoniani \parencite{guglielmini2004lezioni}.} 
     \label{fig:newtoniani}
 \end{figure}
@@ -28,7 +28,7 @@ A seconda dell'andamento della funzione \(\mu(\tau)\) i fluidi possono essere cl
 La rappresentazione analitica del moto di un fluido è assai complessa e richiede l'impiego di modelli al fine di semplificare la descrizione qualitativa e quantitativa di tale moto. Vengono indicate le tre figure fondamentali per la descrizione del moto di un fluido:
 \begin{itemize}
 \item \textbf{traiettoria di una particella}: il luogo dei punti occupati in tempi successivi dalla stessa particella fluida;
-\item \textbf{linea di corrente} (o \textbf{linea di flusso}): è una linea che ha per tangente il vettore velocità in ogni punto;
+\item \textbf{linea di corrente} o \textbf{linea di flusso}: è una linea che ha per tangente il vettore velocità in ogni punto;
 \item \textbf{linea di fumo}: è il luogo dei punti occupati, ad un dato istante, dalle particelle che sono passate per uno stesso punto.
 \end{itemize}
 Nel caso di moto permanente questi  tre luoghi geometrici coincidono. Si definisce vena fluida o filetto di corrente l'insieme delle traiettorie le cui sezioni trasversali hanno velocità (perpendicolare alla sezione stessa), pressione, temperatura e volume specifico costanti.\\
@@ -40,28 +40,37 @@ Il modello di riferimento è quello di moto uni- o monodimensionale e si assumon
 \end{itemize}
 
 \paragraph{Conservazione della massa}
-Si consideri un filetto di corrente in regime permanente. La massa di fluido $m$ che percorre, nell'unità di tempo, una qualunque generica sezione trasversale di area $A$ è costante. Quindi:
-\[\dot{m}=wA\rho = costante\addtag\]
-dove $\dot{m}$ è la portata di massa o portata massica, $w$ è la velocità e $\rho$ è la densità del fluido. Tra due distinte sezioni 1 e 2 la massa di fluido rimane costante:
-\[w_1 A_1 \rho_1 = w_2 A_2 \rho_2\addtag\]
-L'\textit{equazione di continuità}, o \textit{bilancio di massa}, può scriversi in forma differenziale come:
-\[\frac{dw}{w} + \frac{dA}{A} + \frac{d\rho}{\rho} = 0\addtag\]
+Dato un sistema di coordinate cartesiane (x, y, z), si consideri un volume di controllo (VC) con gli spigoli \(dx\), \(dy\), \(dz\), attraversato da un fluido con velocità \(w\) e densità \(\rho\) (\figref{fig:vc}). Siano \(w_x\), \(w_y\) e \(w_z\) le componenti del vettore velocità lungo gli assi principali. Si definisce \(j\) velocità di massa o flusso di massa e si calcola la portata massica in entrata e in uscita sul VC lungo le tre direzioni principali. Se si sommano queste portate, si esprime la variazione di massa infinitesima \(dm\) nel tempo infinitesimo \(dt\) relativa al VC:
+\[dm= - \left[\dfrac{\partial(\rho \; w_x)}{\partial x} + \dfrac{\partial(\rho \; w_y)}{\partial y} + \dfrac{\partial(\rho \; w_z)}{\partial z} \right]dx \; dy \; dz \; dt \label{eq:conservazione} \addtag \]
+La massa di VC può essere espressa anche come il prodotto della densità del fluido per il volume :
+\[m= \rho \; dx \; dy \; \label{eq:massa}\ \addtag \]
+e la variazione nel tempo è:
+\[dm = \dfrac{\partial}{\partial t}\rho \; dx \; dy \; dz \label{eq:varmassa} \addtag \]
+Per il principio di conservazione della massa, la \eqref{eq:conservazione} e la \eqref{eq:varmassa} devono equivalersi:
+\[\dfrac{\partial(\rho \; w_x)}{\partial x} + \dfrac{\partial(\rho \; w_y)}{\partial y} + \dfrac{\partial(\rho \; w_z)}{\partial z}= - \dfrac{\partial \rho}{\partial t} \addtag \label{eq:continuita} \]
+La \eqref{eq:continuita} rappresenta l'equazione di continuità di un fluido in coordinate cartesiane e può essere anche essere scritta come:
+\[ \vec{\nabla} (\rho \vec{w}) = -\dfrac{\partial \rho}{\partial t} \addtag \label{eq:continuitadiff} \]
 
-\paragraph{Bilancio della quantità di moto}
-Si consideri un filetto di corrente in regime permanente a portata massica costante. Si consideri un volume di controllo C.V. (dall'inglese \textit{Control Volume}) compreso tra le sezioni 1 e 2, di massa $m$ più la massa $dm$ che attraversa la sezione 1 nel tempo $d\tau$. Di conseguenza nello stesso intervallo di tempo $d\tau$ una pari massa $dm$ attraversa la sezione 2. La variazione di quantità di moto è pari al prodotto della massa $dm$ per la differenza delle velocità tra le sezioni 1 e 2. Tale variazione di quantità di moto eguaglia l'impulso delle forze agenti sul C.V. (\figref{fig:quantitamoto}):
-\[\sum{F\;d\tau}=dm(w_2-w_1)\qquad \textrm{ovvero}\qquad \sum{F}=\dot{m}(w_2-w_1)\]
-dove \(\sum{F}\) è la risultante delle forze agenti sul C.V. nella direzione del moto.
-\begin{figure}[htbp] %Immagine layout di mandata
+\begin{figure}[htbp] 
     \centering
-    \includegraphics[width=\textwidth]{fig/fluidodinamica/quantitamoto.eps}
-    \caption{Conservazione della quantità di moto a regime permanente.} 
-    \label{fig:quantitamoto}
+    \includegraphics[width=.5\textwidth]{fig/fluidodinamica/cv.eps}
+    \caption{Schematizzazione del parallelepipedo fondamentale o volume di controllo (VC).} 
+    \label{fig:vc}
 \end{figure}
 
+\paragraph{Bilancio della quantità di moto}
+La conservazione della quantità di moto è espressa dal secondo principio della dinamica. Dato un volume di controllo VC (definito precedentemente)la somma della variazione nel tempo \(dt\) della quantità di moto del fluido di volume \(V\)e del flusso netto di quantità di moto attraverso la superficie \(S\) è uguale alla risultante delle forze esterne agenti sul fluido contenuto nel volume stesso.
+In forma integrale:
+\[\frac{d}{dt} \int_V \rho \vec w \, dV + \oint_S \left( \rho \vec w \right) \vec w \cdot \hat n \, dS = \int_V \vec F_V \, dV + \oint_S \underline{\underline T } \addtag \label{eq:intconsqm} \]
+dove \(\underline{\underline T }\) rappresenta il tensore delle tensioni, \(\hat n\) il relativo versore e \(\vec F_V\) le forze di volume. In forma differenziale la \eqref{eq:intconsqm} diventa:
+\[\rho \frac{D \vec u}{Dt} = \rho \vec F_V + \nabla \cdot \underline{\underline T } \addtag \]
+che esprime il bilancio della quantità di moto per unità di volume.
+
+
 \paragraph{Bilancio di energia e equazione di Bernoulli}
-Tra le sezioni estreme di una generica vena fluida si applica l'equazione di bilancio dei sistemi aperti a regime permanente. Si considera come C.V. il volume racchiuso tra le due sezioni sopra citate. L'equazione di bilancio per unità di massa di un sistema aperto si può scrivere in forma differenziale come:
+Tra le sezioni estreme di una generica vena fluida si applica l'equazione di bilancio dei sistemi aperti a regime permanente. Si considera come VC il volume racchiuso tra le due sezioni sopra citate. L'equazione di bilancio per unità di massa di un sistema aperto si può scrivere in forma differenziale come:
 \[dQ-dL_e=dH+\frac{dw^2}{2}+gdz\addtag\]
-dove $dQ$ e $dL_e$ rappresentano gli scambi di calore e di lavoro esterno netto attraverso la superficie di confine, $dH$ rappresenta l'entalpia, $z$ la quota potenziale e \(g\) la costante di gravitazione universale (\(g \simeq 9,81\) m/s\ap{2}). Poiché $dh=TdS_s+vdp$:
+dove $dQ$ e $dL_e$ rappresentano rispettivamente il calore scambiato con l'ambiente esterno e di lavoro esterno netto attraverso la superficie di confine, $dH$ rappresenta l'entalpia, $z$ la quota potenziale e \(g\) la costante di gravitazione universale (\(g \simeq 9,81\) m/s\ap{2}). Poiché $dh=TdS_s+vdp$:
 \[dL_e+TdS_s+v \; dp+\frac{dw^2}{2}+g \; dz\label{eq:intermediobernoulli}\addtag\]
 dove $dS_s$ è la produzione entropica elementare e $v$ il volume specifico. Un qualunque lavoro specifico, può essere espresso come prodotto di un volume specifico per un'opportuna pressione differenziale $dp'$, per omogeneità dimensionale. Questa variazione di pressione differisce dalla variazione che il fluido subisce in moto. Sapendo che una qualsiasi pressione $p$ può essere espressa in termini di peso specifico $\gamma$ e altezza idrica $h$:
 \[dL_e=v\;dp_e=v\;\gamma\;dh_e=g\;dh_e\addtag\label{eq:lavoroesterno}\]
@@ -69,13 +78,13 @@ Allo stesso modo per il lavoro di attrito:
 \[dL_a=v\;dp_a=v\;\gamma\;dh_a=g\;dh_a\addtag\label{eq:lavoroattrito}\]
 Se sostituiamo la \eqref{eq:lavoroesterno} e la \eqref{eq:lavoroattrito} nella \eqref{eq:intermediobernoulli} otteniamo:
 \[dh_e+dh_a+\frac{dp}{\gamma}+\frac{dw^2}{2g}+dz=0\label{eq:bernoulligeneralizzata}\addtag\]
-La \eqref{eq:bernoulligeneralizzata} è detta \textit{equazione di Bernoulli generalizzata} in forma differenziale e ha valenza energetica specifica (per unità di peso). I termini nella formula sono così nominati:
+La \eqref{eq:bernoulligeneralizzata} è detta equazione di Bernoulli generalizzata in forma differenziale e ha valenza energetica specifica (per unità di peso). I termini nella formula sono così nominati:
 \begin{itemize}
-    \item \(dh_e\) \textit{carico motore}, termine effettivo di scambio con l'esterno;
-    \item \(dh_a\) \textit{carico d'attrito}, termine di dissipazione;
-    \item \(\dfrac{dp}{\gamma}\) \textit{carico piezometrico}, l'effettiva variazione di pressione del fluido dovuta al moto;
-    \item \(\dfrac{dw^2}{2g}\) \textit{carico cinetico};
-    \item \(dz\) \textit{carico gravitazionale}, variazione di quota geodetica. 
+    \item \(\mathbf{dh_e}\) \textbf{carico motore}, termine effettivo di scambio con l'esterno;
+    \item \(\mathbf{dh_a}\) \textbf{carico d'attrito}, termine di dissipazione;
+    \item \(\mathbf{\dfrac{dp}{\gamma}}\) \textbf{carico piezometrico}, l'effettiva variazione di pressione del fluido dovuta al moto;
+    \item \(\mathbf{\dfrac{dw^2}{2g}}\) \textbf{carico cinetico};
+    \item \(\mathbf{dz}\) \textbf{carico gravitazionale}, variazione di quota geodetica. 
 \end{itemize}
 Se la \eqref{eq:bernoulligeneralizzata} viene integrata tra la sezione 1 e la sezione 2 si ottiene:
 \[(h_e)_{1,2}+(h_a)_{1,2}+\int^2_1{\frac{dp}{\gamma}}+\frac{w^2_2-w^2_1}{2g}+z_2-z_1=0\label{eq:bernoulliintegrata}\addtag\]
@@ -84,14 +93,23 @@ In caso di un condotto a pareti rigide, di sezione costante, orizzontale e attra
 \[(h_a)_{1,2}+\int^2_1{\frac{dp}{\gamma}}+\frac{w^2_2-w^2_1}{2g}=0\label{eq:attritointermedio}\addtag\]
 Se si ammettono trascurabili le variazioni di peso specifico rispetto alle variazioni di pressione, cioè si assume che il peso specifico sia costante, e la variazione di velocità nulla:
 \[(h_a)_{1,2}=\frac{p_1-p_2}{\gamma}\label{eq:caricoattrito}\addtag\]
-La \eqref{eq:caricoattrito} esprime il \textit{carico d'attrito} o in termini operativi la \textit{perdita di carico}. 
+La \eqref{eq:caricoattrito} esprime il carico d'attrito o in termini operativi la perdita di carico. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Calcolo delle cadute di pressione per attrito}
 \subsection{Numero di Reynolds}
-Si consideri un condotto rettilineo a pareti perfettamente lisce in cui scorre un fluido a velocità \(w\), di densità \(\rho\) e viscosità \(\mu\).\\
-Si definisce \textit{moto laminare} (o \textit{viscoso} o \textit{regolare}) il moto dei fluidi caratterizzato dall'assenza di componenti caotiche. Le traiettorie effettive delle particelle risultano quindi regolari. Quando la corrente ha direzione rettilinea anche le traiettorie sono rettilinee e ad esse si raccordano quando, per esempio, la presenza di una condotta curva impone deviazioni della direzione.\\
-Incrementando la velocità media di portata si denota che le traiettorie delle particelle fluide tendono a non mantenere direzione parallela all'asse della condotta. Tale moto è definito \textit{turbolento} e può essere inteso come la somma di due tipi di movimento: al \textit{moto di trasporto}, diretto secondo l'asse della tubazione, si sovrappone un movimento caotico e disordinato definito \textit{moto di agitazione}.\\
-Reynolds fu il primo a definire che il tipo di moto dovesse dipendere non solo dalla velocità ma anche dalla densità e viscosità del fluido oltre che alla geometria della condotta. Il \textit{numero di Reynolds} è così definito:
+Si consideri un condotto rettilineo a pareti perfettamente lisce in cui scorre un fluido a velocità \(w\), di densità \(\rho\) e viscosità \(\mu\). Il regime è definito laminare se le traiettorie del flusso sono rettilinee e il profilo di velocità è parabolico (\figref{fig:laminare}). Il regime di flusso è invece turbolento quando le particelle non seguono traiettorie ordinate e il moto che ne risulta avviene in maniera caotica (\figref{fig:turbolento}).
+
+\begin{figure}[htbp]
+\centering
+    \subfloat[][Moto laminare]
+    {\includegraphics[width=.4\textwidth]{fig/fluidodinamica/laminareturbolento/laminare.eps} \label{fig:laminare}} \qquad \qquad
+    \subfloat[][Moto turbolento]
+    {\includegraphics[width=.4\textwidth]{fig/fluidodinamica/laminareturbolento/turbolento.eps} \label{fig:turbolento}} \\
+\caption{Regime di flusso monofase in condotta.}
+\label{fig:laminareturbolento}
+\end{figure}
+
+Reynolds fu il primo a definire che il tipo di moto dovesse dipendere non solo dalla velocità ma anche dalla densità e viscosità del fluido oltre che alla geometria della condotta. Il numero di Reynolds è così definito:
 \[Re=\frac{\rho \; w \; D}{\mu}\addtag\label{eq:reynolds}\]
 Il numero di Reynolds definisce il tipo di moto che si instaura in condotta:
 \begin{itemize}
@@ -101,7 +119,7 @@ Il numero di Reynolds definisce il tipo di moto che si instaura in condotta:
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fattore di attrito di Moody}
-Sia in condizioni di moto laminare che in condizioni di moto turbolento la caduta di pressione totale dipende dalle caratteristiche del fluido,  del moto e della condotta. In breve, il carico di attrito dipende da parametri:
+Sia in condizioni di moto laminare che, in condizioni di moto turbolento, la caduta di pressione totale dipende dal tipo di fluido, dal regime di moto e dalle caratteristiche della condotta. In breve, il carico di attrito dipende da parametri:
 \begin{itemize}
     \item \textbf{fisici} - \(\mu\) e \(\rho\) - relativi ai fluidi in movimento;
     \item \textbf{cinematici} - \(w\) - caratterizzanti il trasporto di massa fluida;
@@ -351,7 +369,7 @@ Il punto cruciale del calcolo delle cadute di pressione per un flusso bifase ris
 Si può esprimere il numero di Fanning tramite la \eqref{eq:fanningreynolds}, il numero di Reynolds per mezzo della \eqref{eq:reynolds}. Come viscosità, parametro utile al calcolo del numero di Reynolds, può essere scelta quella della fase liquida oppure una media pesata in base al titolo di vapore \(x\):
 \[\mu_{tot} =x \; \mu_G + (1+x) \; \mu_L \addtag \]
 \\
-\'E importante acquisire le basi della fluidodinamica multifase per capire come le iterazioni tra le diverse fasi e le perdite di carico definiscano il flusso che si instaura in condotta. L'ingegneria petrolifera ha cercato negli anni di affinare i modelli interpretativi, così da avvicinare le stime di produzione di un pozzo ai trend reali. In particolar modo, la corretta interpretazione del moto multifase per i pozzi a gas determina la tipologia e la configurazione di sistemi per l'aumento di portata o la diminuzione delle perdite di carico. Si intuisce quindi che l'aumento delle performance è legato alla veridicità del modello calcolato. Nel prossimo capitolo sono trattati i problemi di un pozzo a gas legati a condizioni di flusso multifase e le tecnologie oggi utilizzate per ovviare al calo di rendimento nel tempo.
+\'E importante acquisire le basi della fluidodinamica multifase per capire come le iterazioni tra le diverse fasi e le perdite di carico definiscano il flusso che si instaura in condotta. L'ingegneria petrolifera ha affinato negli anni i modelli interpretativi, così da avvicinare le stime di produzione di un pozzo ai trend reali. In particolar modo, la corretta interpretazione del moto multifase per i pozzi a gas determina la tipologia e la configurazione di sistemi per l'aumento di portata o la diminuzione delle perdite di carico. Si intuisce quindi che l'aumento delle performance è legato alla veridicità del modello calcolato. Nel prossimo capitolo sono trattati i problemi di un pozzo a gas legati a condizioni di flusso multifase e le tecnologie oggi utilizzate per ovviare al calo di rendimento nel tempo.
 %\section{Moto dei fluidi comprimibili in condotta a sezione variabile}
 %\subsection{Velocità del suono}
 %\subsection{Equazione di Hugoniot e numero di Mach}

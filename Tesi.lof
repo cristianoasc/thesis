@@ -1,0 +1,50 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {italian}
+\defcounter {refsection}{0}\relax 
+\select@language {italian}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Azioni esercitate da un fluido tra due superfici in moto relativo \parencite {guglielmini2004lezioni}.\relax }}{4}{figure.caption.6}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Reologia di un fluido nel caso di fluidi newtoniani e non newtoniani \parencite {guglielmini2004lezioni}.\relax }}{5}{figure.caption.7}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Schematizzazione del parallelepipedo fondamentale o volume di controllo (VC).\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Conservazione della quantit\IeC {\`a} di moto a regime permanente.\relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Regime di flusso monofase in condotta.\relax }}{10}{figure.caption.10}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Diagramma di Moody per il calcolo del fattore di attrito in condotta.\relax }}{12}{figure.caption.11}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Regimi di flusso bifase in condotte verticali\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Mappa per regimi di flusso bifase per condotte verticali \parencite {griffith1984multiphase}.\relax }}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Regimi di flusso bifase in condotte orizzontali\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Mappa di \textcite {griffith1984multiphase}) per regimi di flusso bifase per condotte orizzontali.\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Mappa di \textcite {baker1954simultaneous}) per regimi di flusso bifase per condotte orizzontali.\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Mappa di \textcite {taitel1976model}) per regimi di flusso bifase per condotte orizzontali. Gli assi di riferimento cambiano a seconda della curva considerata, come descritto nel pannello al di sotto del grafico.\relax }}{22}{figure.caption.18}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Schematizzazione del ciclo di un pozzo a gas, combinata con l'analisi della curva di declino \parencite {lea2011gas}\relax }}{29}{figure.caption.19}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Schematizzazione dell'analisi nodale combinata alla portata critica di trascinamento\relax }}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Schema di applicazione della velocity string \parencite {arachman2004liquid}\relax }}{33}{figure.caption.21}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Layout semplificato del GasJack\IeC {\texttrademark }, copressore singolo utilizzato per operazioni di compressione della testa pozzo \parencite {garner2009backside}\relax }}{34}{figure.caption.22}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Tipica installazione di \textit {plunger} \parencite {lea2011gas}\relax }}{36}{figure.caption.23}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Ciclo di un plunger convenzionale\relax }}{37}{figure.caption.24}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Principali tipologie di \textit {plunger} proposte da Weatherford \parencite {weatherford2008brochure}\relax }}{38}{figure.caption.25}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Laurilsolfato di sodio, tensioattivo anionico utilizzato in molte famiglie di prodotti domestici. La catena a 12 atomi di carbonio rappresenta il gruppo apolare (in blu) mentre il gruppo solfato associato allo ione sodio rappresenta il gruppo polare (in viola).\relax }}{41}{figure.caption.27}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Classificazione dei tensioattivi in base alla carica del gruppo polare.\relax }}{42}{figure.caption.28}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Sezione parziale di una micella anionica, il layer compatto negativo generato dall'orientamento del gruppo polare del tensioattivo \IeC {\`e} circondato dalla fase acqua \parencite {attwood2012fasttrack}.\relax }}{43}{figure.caption.29}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Insufflazioni nel liquido e generazione delle bolle d'aria \parencite {tego2014brochure}.\relax }}{44}{figure.caption.30}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Struttura della schiuma e stabilizzazione della lamella a opera dei surfactanti \parencite {tego2014brochure}.\relax }}{44}{figure.caption.31}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Penetrazione e espansione del \textit {defoamer} sul film di tensioattivi \parencite {tego2014brochure}.\relax }}{46}{figure.caption.32}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Processo di bridging del \textit {defoamer} sul film di tensioattivi \parencite {tego2014brochure}.\relax }}{46}{figure.caption.33}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Processo di dewetting del \textit {defoamer} sul film di tensioattivi \parencite {tego2014brochure}.\relax }}{47}{figure.caption.34}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Tensione superficiale e densit\IeC {\`a} della schiuma in funzione della concentrazione in acqua per tensioattivi attualmente disponibili sul mercato \parencite {campbell2001corrosion}.\relax }}{48}{figure.caption.35}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Applicazione di \textit {foamer} in-batch su un pozzo con produzione a shut-in programmati \parencite {wittfeld2015foam}.\relax }}{50}{figure.caption.36}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Schema generale di sistema di iniezione \textit {foamer} in continuo tramite \textit {capillary string} \parencite {wittfeld2015foam}.\relax }}{52}{figure.caption.37}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Valutazione pre- e post-applicazione di \textit {foamer} in continuo su un pozzo affetto da \textit {liquid loading} \parencite {wittfeld2015foam}.\relax }}{55}{figure.caption.38}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Tipologie di trattamento.\relax }}{57}{figure.caption.39}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramma di fase per una miscela multicomponente \parencite {bianco2005impianti}\relax }}{60}{figure.caption.41}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramma della formazione degli idrati in funzione di temperatura e pressione \parencite {bianco2005impianti}.\relax }}{64}{figure.caption.43}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Danni in condotta creati dalla formazione di idrati \parencite {borghi2005idrati}.\relax }}{65}{figure.caption.44}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Inibizione degli idrati tramite glicol etilenico \parencite {bianco2005impianti}.\relax }}{66}{figure.caption.45}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Planimetria delle installazioni on-shore e off-shore relative al polo produttivo di San Giorgio Mare.\relax }}{79}{figure.caption.46}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Impianto di compressione del gas naturale, centrale SGM.\relax }}{82}{figure.caption.47}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Pompe dosatrici per iniziezione di glicol.\relax }}{84}{figure.caption.48}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Layout linea di mandata SNM, modalit\IeC {\`a} di applicazione del batch.\relax }}{85}{figure.caption.49}

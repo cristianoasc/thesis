@@ -1,30 +1,21 @@
-\documentclass[a4paper,11pt,openright,twoside]{report} 
+\documentclass[a4paper,11pt,openright,twoside,titlepage]{report} 
 
 % oneside - solo fronte, twoside - fronte retro
 % openright - prima pagina dei capitoli su pagina destra, openany - indifferentemente
 %
 \usepackage[bottom]{footmisc}
 \usepackage{fancyhdr}
-%\pagestyle{fancy}
 \usepackage{url}
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{amsfonts}                 %Pacchetto per inserire i caratteri matematici
 \usepackage{makeidx}                  %Pacchetto per generare l'indice analitico
-%\usepackage[utf8x]{inputenc}          %Pacchetto per poter inserire direttamente nel testo%lettere accentate. Se si scrive in inglese si può commentare
+%\usepackage[utf8x]{inputenc}         %Pacchetto per poter inserire direttamente nel testo%lettere accentate. Se si scrive in inglese si può commentare
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
-
 \usepackage[T1]{fontenc}              %Pacchetto che gestisce l'encoding T1
-
-\usepackage[english,italian]{babel}   %Pacchetto per la sillabazione delle parole
-                                      %in italiano e in inglese
-
-%\usepackage[Sonny]{fncychap}         %Pacchetto per avere diversi tipi di titoli di
-                                      %capitolo diversi. Commentare se si desidera
-                                      %avere i titoli in maniera normale. Gli stili
-                                      %possibili sono 2: Sonny, Lenny
-
+\usepackage[english,italian]{babel}   %Pacchetto per la sillabazione delle parole in italiano e in inglese
+%\usepackage[Sonny]{fncychap}         %Pacchetto per avere diversi tipi di titoli di capitolo diversi.  Commentare se si desidera avere i titoli in maniera normale. Gli stili possibili sono 2: Sonny, Lenny
 \usepackage{enumitem}
 \usepackage{verbatim}                 %Pacchetti per stampare il codice
 \usepackage{listings}                 %Pacchetti per stampare il codice
@@ -43,13 +34,17 @@
 \usepackage{titlesec} %%Impostazione nuove sezioni
 %\usepackage{glossaries}
 \usepackage{amsmath} %riferimenti a equazioni
-\usepackage[version=3]{mhchem}
+\usepackage[version=3]{mhchem} %Pacchetto per formulazioni chimiche
 \usepackage[margin=10pt, font=small, labelfont=bf]{caption}
 \usepackage[load-configurations = abbreviations]{siunitx} %pacchetto per le unità di misura
 \sisetup{per-mode = symbol} %specifica l'impiego dello slash per unità con esponente negativo (e.g. lt/h)
 \usepackage[gen]{eurosym} %pacchetto simbolo euro ufficiale
 \DeclareUnicodeCharacter{20AC}{\euro{}} %definizione simbolo € come "euro"
-\usepackage[]{xfrac} %pacchetto per frazioni obblique
+\usepackage[]{xfrac} %pacchetto per frazioni oblique
+\usepackage{lscape} %pacchetto per pagine in orizzontale
+\usepackage{mathptmx} %carattere times
+
+
 
 \hypersetup{
 pdftitle={},%
@@ -74,8 +69,11 @@ pageanchor=true
                                         %   della libreria fancyhdr
                                         %   per ulteriori delucidazioni
 \pagestyle{fancy}\addtolength{\headwidth}{20pt}
-\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection \ #1}{}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{\thesubsection}{}}
+
 \rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
 \cfoot{}
 
@@ -113,7 +111,10 @@ pageanchor=true
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \begin{document}
+
+\input{tex/Frontespizio.tex}
 
 \input{tex/Dedica.tex}
 
@@ -135,13 +136,12 @@ pageanchor=true
 \input{tex/Introduzione.tex}
 \input{tex/Fluidodinamica.tex}
 \input{tex/Foamer.tex}
-\input{tex/ImpiantiNUOVAPROPOSTA.tex}
+\input{tex/Impianti.tex}
 \input{tex/Piggaggio.tex}
 \input{tex/Test.tex}
 \input{tex/Conclusioni.tex}
 \input{tex/Bibliografia.tex}
 \input{tex/Ringraziamenti.tex}
          
-
-
 \end{document}
+
