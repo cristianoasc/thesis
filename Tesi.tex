@@ -1,8 +1,9 @@
-\documentclass[a4paper,11pt,openright,twoside,titlepage]{report} 
+\documentclass[a4paper,12pt,openright,twoside,titlepage]{report} 
 
 % oneside - solo fronte, twoside - fronte retro
 % openright - prima pagina dei capitoli su pagina destra, openany - indifferentemente
 %
+
 \usepackage[bottom]{footmisc}
 \usepackage{fancyhdr}
 \usepackage{url}
@@ -58,7 +59,7 @@ pageanchor=true
 }                 %Pacchetto per inserire i riferimenti ipertestuali
 \addbibresource{tex/Bibliografia.bib} 
 %
-\oddsidemargin=30pt \evensidemargin=20pt%impostano i margini
+\oddsidemargin=20pt \evensidemargin=30pt%impostano i margini
 %\hyphenation{sil-la-ba-zio-ne pa-ren-te-si}%serve per la sillabazione: tra parentesi 
 					   %vanno inserite come nell'esempio le parole 
 %					   %che latex non riesce a tagliare nel modo giusto andando a capo.
@@ -71,11 +72,14 @@ pageanchor=true
 \pagestyle{fancy}\addtolength{\headwidth}{20pt}
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{#1}{}}
-\renewcommand{\subsectionmark}[1]{\markright{\thesubsection}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection\ #1}{}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection}{}}
+%\renewcommand{\subsubsectionmark}[1]{\markright{\thesubsubsection\ #1}}
 
-\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
+%\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
 \cfoot{}
+
 
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -122,15 +126,20 @@ pageanchor=true
 \setcounter{secnumdepth}{3}
 
 \pagenumbering{Roman}                   %serve per mettere i numeri romani
+
+
 \input{tex/Sommario.tex}
 %\printglossaries
 
 \input{tex/Indice.tex}               % non deve essere presente nell'indice
 %\input{tex/Terminologia.tex}
+%\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}\bfseries{\thepage}}
+%\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\scshape\chaptername\ \thechapter}]{\fancyplain{}\bfseries{\thepage}}
+\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\scshape\leftmark}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
-\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+
+
 \pagenumbering{arabic}                  %mette i numeri arabi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tex/Introduzione.tex}

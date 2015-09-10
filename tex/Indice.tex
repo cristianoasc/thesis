@@ -1,16 +1,28 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
-\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
-\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries
-INDICE}}
-
-\tableofcontents                        %crea l'indice
+\rhead[\fancyplain{}{\bfseries\scshape
+Indice}]{\fancyplain{}{\thepage}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\bfseries\scshape
+Indice}}
+\tableofcontents\thispagestyle{empty}                 %crea l'indice
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\listoffigures                          %crea l'elenco delle figure
+\clearpage{\pagestyle{empty}\cleardoublepage}\thispagestyle{empty} 
+
+\rhead[\fancyplain{}{\bfseries\scshape
+Elenco delle figure}]{\fancyplain{}{\thepage}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\bfseries\scshape
+Elenco delle figure}}
+
+\listoffigures\thispagestyle{empty}                           %crea l'elenco delle figure
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\listoftables                           %crea l'elenco delle tabelle
+
+\rhead[\fancyplain{}{\bfseries\scshape
+Elenco delle tabelle}]{\fancyplain{}{\thepage}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\bfseries\scshape
+Elenco delle tabelle}}
+
+\listoftables\thispagestyle{empty}                            %crea l'elenco delle tabelle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 \clearpage{\pagestyle{empty}\cleardoublepage}

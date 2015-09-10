@@ -1,9 +1,9 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter{Moto dei fluidi nelle condotte in pressione}\label{ch:fluidodinamica}
+\chapter{Moto dei fluidi nelle condotte in pressione}\label{ch:fluidodinamica}\thispagestyle{empty} 
 \chaptermark{Fluidi in condotta}
 La fluidodinamica è un ramo della meccanica del continuo e studia il comportamento di liquidi e gas in movimento. Si parla di termofluidodinamica quando, in alcuni processi, le grandezze e i fenomeni termici sono particolarmente rilevanti. Lo studio del moto dei fluidi in condotta riveste notevole importanza nella progettazione di qualsiasi impianto industriale, dove il calcolo delle perdite di carico rappresenta il nodo cruciale per un'appropriata interpretazione e risoluzione del problema. Solitamente in ambito tecnico non si fa riferimento a fluidi monofase, bensì a fluidi multifase, dove l'iterazione tra fasi gioca un ruolo fondamentale e il calcolo delle variabili è possibile solo grazie a modelli complessi e fortemente dipendenti dalle condizioni al contorno. 
 \section{Il concetto di fluido e nozioni fondamentali}
-Per fluido si intende un materiale che non è in grado di reagire a sforzi di taglio statici. Non si trasmettono quindi, in condizioni di quiete, forze parallele attraverso una qualunque superficie ideale tracciata nel fluido. Attraverso la stessa superficie possono trasmettersi forze perpendicolari, la cui risultante è nota come \textit{pressione}.\\
+Per fluido si intende un materiale che non è in grado di reagire a sforzi di taglio statici. Non si trasmettono quindi, in condizioni di quiete, forze parallele attraverso una qualunque superficie ideale tracciata nel fluido. Attraverso la stessa superficie possono trasmettersi forze perpendicolari, la cui risultante è nota come pressione.\\
 La densità di un fluido \(\rho\) è definita come la massa dell'unità di volume. Si definisce densità relativa \(\rho_r\) il rapporto tra la densità del materiale e quella dell'acqua a pressione atmosferica e temperatura a 4°C. Il peso specifico \(\gamma\) è il peso dell'unità di volume. Per volume specifico \(v\) si intende il volume dell'unità di massa, cioè l'inverso della densità. \\
 In condizioni dinamiche un fluido, al contrario delle condizioni di quiete, reagisce a sforzi di taglio. Si consideri un meato (intercapedine in cui è presente un piccolo strato di fluido) di altezza \(h\), delimitato tra due pareti piane indefinite, una in quiete e l'altra in movimento con velocità \(w\) (\figref{fig:meato}).
 \begin{figure}[htbp] %Immagine meato
@@ -59,13 +59,12 @@ La \eqref{eq:continuita} rappresenta l'equazione di continuità di un fluido in 
 \end{figure}
 
 \paragraph{Bilancio della quantità di moto}
-La conservazione della quantità di moto è espressa dal secondo principio della dinamica. Dato un volume di controllo VC (definito precedentemente)la somma della variazione nel tempo \(dt\) della quantità di moto del fluido di volume \(V\)e del flusso netto di quantità di moto attraverso la superficie \(S\) è uguale alla risultante delle forze esterne agenti sul fluido contenuto nel volume stesso.
+La conservazione della quantità di moto è espressa dal secondo principio della dinamica. Dato un volume di controllo VC (definito precedentemente) la somma della variazione  della quantità di moto nel tempo \(dt\) del fluido di volume \(V\)e del flusso netto di quantità di moto attraverso la superficie \(S\) è uguale alla risultante delle forze esterne agenti sul fluido contenuto nel volume stesso.
 In forma integrale:
-\[\frac{d}{dt} \int_V \rho \vec w \, dV + \oint_S \left( \rho \vec w \right) \vec w \cdot \hat n \, dS = \int_V \vec F_V \, dV + \oint_S \underline{\underline T } \addtag \label{eq:intconsqm} \]
+\[\frac{d}{dt} \int_V \rho \vec w \, dV + \oint_S \left( \rho \vec w \right) \vec w \cdot \hat n \, dS = \int_V \vec F_V \, dV + \oint_S \underline{\underline T }\,dS \addtag \label{eq:intconsqm} \]
 dove \(\underline{\underline T }\) rappresenta il tensore delle tensioni, \(\hat n\) il relativo versore e \(\vec F_V\) le forze di volume. In forma differenziale la \eqref{eq:intconsqm} diventa:
 \[\rho \frac{D \vec u}{Dt} = \rho \vec F_V + \nabla \cdot \underline{\underline T } \addtag \]
 che esprime il bilancio della quantità di moto per unità di volume.
-
 
 \paragraph{Bilancio di energia e equazione di Bernoulli}
 Tra le sezioni estreme di una generica vena fluida si applica l'equazione di bilancio dei sistemi aperti a regime permanente. Si considera come VC il volume racchiuso tra le due sezioni sopra citate. L'equazione di bilancio per unità di massa di un sistema aperto si può scrivere in forma differenziale come:
@@ -123,18 +122,18 @@ Sia in condizioni di moto laminare che, in condizioni di moto turbolento, la cad
 \begin{itemize}
     \item \textbf{fisici} - \(\mu\) e \(\rho\) - relativi ai fluidi in movimento;
     \item \textbf{cinematici} - \(w\) - caratterizzanti il trasporto di massa fluida;
-    \item \textbf{geometrici} - \(D\) e \(\epsilon\) - legati alla tubazione e alla \textit{scabrezza assoluta} della parete interna della condotta.
+    \item \textbf{geometrici} - \(D\) e \(\epsilon\) - legati alla tubazione e alla scabrezza assoluta della parete interna della condotta.
 \end{itemize}
 Perciò si può affermare che:
 \[\frac{\Delta p}{l}=f(\rho, \; \mu, \; w, \; D, \; \epsilon) \addtag \label{eq:funzcaduta} \]
 dove \(l\) è la lunghezza della condotta. L'equazione di Darcy-Weisbach può essere definita sia in funzione delle perdite di carico piezometriche \eqref{eq:darcyweisbachH} sia in funzione delle cadute di pressione \eqref{eq:darcyweisbachP}:
 \[h_a = \lambda \; \frac{l}{D} \; \frac{w^2}{2 \; g} \addtag \label{eq:darcyweisbachH} \]
 \[\Delta p_a = \lambda \; \frac{l}{D} \; \frac{\rho \; w^2}{2} \addtag \label{eq:darcyweisbachP} \]
-dove \(\lambda\) è detto \textit{fattore d'attrito di Moody} o \textit{indice di resistenza}. La perdita di carico corrispondente, per un certo valore \(\lambda\), risulta proporzionale al carico cinetico e alla lunghezza del condotto. In regime di moto laminare il fattore di attrito è proporzionale al solo coefficiente di Reynolds:
+dove \(\lambda\) è detto fattore d'attrito di Moody o indice di resistenza. La perdita di carico corrispondente, per un certo valore \(\lambda\), risulta proporzionale al carico cinetico e alla lunghezza del condotto. In regime di moto laminare il fattore di attrito è proporzionale al solo coefficiente di Reynolds:
 \[\lambda=\frac{64}{Re} \addtag \]
-In regime tubolento l'indice di resistenza è legata alla rugosità della parete. Il rapporto \(\frac{\epsilon}{D}\) è definito \textit{scabrezza relativa}. La relazione funzionale equivalente è:
+In regime tubolento l'indice di resistenza è legata alla rugosità della parete. Il rapporto \(\frac{\epsilon}{D}\) è definito scabrezza relativa. La relazione funzionale equivalente è:
 \[\lambda=f \; \left(Re, \; \frac{\epsilon}{D}\right) \addtag \]
-Sulla base dei risultati sperimentali al variare dei parametri del modello di flusso in condotta in regime turbolento, è stato costituito il \textit{diagramma di Moody} (\figref{fig:moody}). Gli andamenti all'interno di tale diagramma sono la rappresentazione grafica della \textit{correlazione di Colebrook}:
+Sulla base dei risultati sperimentali al variare dei parametri del modello di flusso in condotta in regime turbolento, è stato costituito il diagramma di Moody (\figref{fig:moody}). Gli andamenti all'interno di tale diagramma sono la rappresentazione grafica della correlazione di Colebrook:
 \[ \frac{1}{\sqrt{\lambda}} = - 2 \ln \left( \frac { \epsilon/D} {3{,}71} + \frac {2{,}51} {Re \, \sqrt{\lambda}} \right) \addtag \label{eq:colebrook} \]
 
 \begin{figure}[htbp] %Immagine diagramma di Moody
@@ -144,7 +143,7 @@ Sulla base dei risultati sperimentali al variare dei parametri del modello di fl
     \label{fig:moody}
 \end{figure}
 
-Il fattore di attrito può essere espresso anche tramite il \textit{numero di Fanning} \(f\), adimensionale e definito come il rapporto tra gli sforzi di taglio e le forze di inerzia:
+Il fattore di attrito può essere espresso anche tramite il numero di Fanning \(f\), adimensionale e definito come il rapporto tra gli sforzi di taglio e le forze di inerzia:
 \[f=\dfrac{2\tau}{\rho w^2} \addtag \label{fanning} \]
 Il fattore di attrito di Moody è quattro volte il numero di Fanning:
 \[\lambda = 4f \addtag \label{eq:fanningmoody} \]
@@ -155,7 +154,7 @@ La \eqref{eq:fanningreynolds} è applicabile in condizione di tubi a pareti inte
 \subsection{Perdite di carico per un liquido}
 Una relazione approssimativa per la valutazione delle perdite di carico di liquidi in condotta è quella di Hazen-Williams.  Questa relazione è valida solo per acqua in condizioni di regime turbolento a temperatura compresa tra i 4°C e 25°C.
 \[\frac{h_a}{l} = \frac{10,65\ Q^{1,85}}{C^{1,85}\ d^{4,87}} \addtag \label{eq:HW}\]
-dove \(Q\) è la \textit{portata volumetrica}, la costante moltiplicativa numerica 10,65 non è adimensionale (ha le dimensioni di \(s^{1,85}/m^{0,86}\)) e la costante adimensionale \(C\) è un valore tabellato.
+dove \(Q\) è la portata volumetrica, la costante moltiplicativa numerica 10,65 non è adimensionale (ha le dimensioni di \(s^{1,85}/m^{0,86}\)) e la costante adimensionale \(C\) è un valore tabellato.
 \begin{table}[htbp]
     \small
     \centering
@@ -176,7 +175,7 @@ dove \(Q\) è la \textit{portata volumetrica}, la costante moltiplicativa numeri
     \label{tab:coefficientiHZ}
     \caption{Coefficienti $C$ adimensionali per la formula di Hazen-Williams.}
 \end{table}
-L'equazione fornisce direttamente il valore delle perdite di carico distribuite per unità di lunghezza della tubazione in funzione della portata volumetrica e del diametro idraulico. Se ora esplicitiamo la \eqref{eq:darcyweisbachH} in funzione del diametro interno \(D\), ponendo la \textit{portata volumetrica} come \(Q=w \, A\):
+L'equazione fornisce direttamente il valore delle perdite di carico distribuite per unità di lunghezza della tubazione in funzione della portata volumetrica e del diametro idraulico. Se ora esplicitiamo la \eqref{eq:darcyweisbachH} in funzione del diametro interno \(D\), ponendo la portata volumetrica come \(Q=w \, A\):
 \[h_a = \lambda \; \frac{l}{D} \; \frac{w^2}{2 \; g} \quad \implies \quad \frac{h_a}{l}=\frac{8 \, f}{\pi^2 \, 2g} \, \frac{Q^2}{D^5} \addtag \label{eq:darcyweisbachespl} \]
 In entrambe le formulazioni (la forma generale delle perdite di carico e l'apporssimazione di Hazen-Williams) si rileva che, a parità di portata, le perdite di carico sono inversamente proporzionali al diametro della tubazione elevato ad un esponente prossimo a 5.
 
@@ -187,7 +186,7 @@ In condotte lunghe, il flusso di un gas è prossimo alle condizioni isotermiche.
 dove \(p_1\) e \(p_2\) sono le pressioni all'inizio e alla fine della condotta.
 Se esplicitiamo nella \eqref{eq:cpgasgenerale1} il volume specifico in ingresso \(v_1\) utilizzando l'equazione di stato di un gas reale:
 \[{p_1}^2-{p_2}^2=Z_m R T \left(\dfrac{w}{A}\right)^2\left(\lambda \, \dfrac{l}{D}+2\ln\dfrac{p_1}{p_2}\right)  \addtag \label{eq:cpgasgenerale2}\]
-dove \(Z_m\) è il \textit{fattore di comprimibilità del gas}, \(R\) è la \textit{costante universale dei gas perfetti} e \(T\) la temperatura.
+dove \(Z_m\) è il fattore di comprimibilità del gas, \(R\) è la costante universale dei gas perfetti e \(T\) la temperatura.
 Si formulino le seguenti assunzioni:
 \begin{itemize}
     \item flusso di gas a condizioni isotermiche;
@@ -226,7 +225,7 @@ dove \(f'\) assume valori diversi a seconda del tipo di singolarità. La somma d
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Moto multifase}
-In termodinamica classica si definisce \textit{fase} come uno stato macroscopico della materia omogeneo per struttura fisica e composizione chimica. I \textit{flussi bifase} sono caratterizzati dalla presenza di due fasi e rappresentano il caso più semplice di \textit{flusso multifase} o multicomponente. Nei flussi bifase, l'iterazione tra le due fasi porta alla formazione di particolari regimi di flusso. Il verificarsi di un determinato regime dipende dalla portata, dalle caratteristiche fisiche e dalle condizioni termodinamiche delle due fasi e dalle caratteristiche fisiche dell'impianto.
+In termodinamica classica si definisce fase come uno stato macroscopico della materia omogeneo per struttura fisica e composizione chimica. I flussi bifase sono caratterizzati dalla presenza di due fasi e rappresentano il caso più semplice di flusso multifase o multicomponente. Nei flussi bifase, l'iterazione tra le due fasi porta alla formazione di particolari regimi di flusso. Il verificarsi di un determinato regime dipende dalla portata, dalle caratteristiche fisiche e dalle condizioni termodinamiche delle due fasi e dalle caratteristiche fisiche dell'impianto.
 
 \subsection{Regime di flusso in condotta}
 L'inclinazione della condotta incide fortemente sulla formazione dei diversi regimi di flusso: in caso di tubazioni verticali, la forza gravitazionale agisce nella stessa direzione della forza inerziale, quindi lungo l'asse della condotta. In condotte verticali si hanno quindi regimi pseudo-simmetrici rispetto l'asse della condotta, in tubazioni orizzontali la fase liquida e la fase gassosa tendono a disporsi rispettivamente sulla parte inferiore e superiore. 
@@ -296,7 +295,7 @@ I regimi di flusso in condizioni di condotta orizzontale possono essere così cl
 Per la determinazione dei diversi regimi di flusso bifase aria-acqua si fa riferimento alle mappe per condotte orizzontali proposte da \textcite{griffith1984multiphase}, \textcite{baker1954simultaneous} e \textcite{taitel1976model}.
 
 \paragraph{\textcite{griffith1984multiphase}}
-Il regime di flusso è definito tramite la \textit{velocità superficiale} \(w_i\), legata alla portata volumetrica della fase i-esima attraverso una generica sezione \(A\) della condotta. Si ha quindi:
+Il regime di flusso è definito tramite la velocità superficiale \(w_i\), legata alla portata volumetrica della fase i-esima attraverso una generica sezione \(A\) della condotta. Si ha quindi:
 \[w_G = \frac{Q_G}{A} \addtag\]
 \[w_L = \frac{Q_L}{A} \addtag\]
 dove i pedici \(g\) e \(l\) fanno riferimento alla fase gassosa o liquida. Le linee continue interne rappresentano la transizione tra i diversi regimi.\\
@@ -309,7 +308,7 @@ Per basse velocità superficiali della fase liquida si verificano flussi stratif
 \end{figure}
 
 \paragraph{\textcite{baker1954simultaneous}}
-La mappa di \textcite{baker1954simultaneous} per condotte orizzontali con flusso bifase \figref{fig:baker} è stata proposta originariamente sia per Sistema Internazionale che per sistema consuetudinario statunitense. Per l'utilizzo della mappa devono essere determinati i parametri adimensionali \(\Lambda\) e \(\Psi\) e la \textit{velocità di massa} o \textit{flusso di massa} \(j_i\), la massa della fase i-esima che attraversa una generica sezione trasversale \(A\) della condotta:
+La mappa di \textcite{baker1954simultaneous} per condotte orizzontali con flusso bifase \figref{fig:baker} è stata proposta originariamente sia per Sistema Internazionale che per sistema consuetudinario statunitense. Per l'utilizzo della mappa devono essere determinati i parametri adimensionali \(\Lambda\) e \(\Psi\) e la velocità di massa o flusso di massa \(j_i\), la massa della fase i-esima che attraversa una generica sezione trasversale \(A\) della condotta:
 \[j_G = \frac{\dot{m_G}}{A}=\frac{\rho_G w_G A}{A}=\rho_G w_G \addtag\]
 \[j_L = \frac{\dot{m_L}}{A}=\frac{\rho_L w_L A}{A}=\rho_L w_L \addtag\]
 dove \(j_G\) e \(j_L\) sono (in modulo) la velocità di massa del gas e del liquido. I parametri adimensionali \(\Lambda\) e \(\Psi\) sono definiti da:
@@ -331,7 +330,7 @@ I valori sugli assi x e y sono così identificati. L'intersezione sulla mappa fo
 \end{figure}
 
 \paragraph{\textcite{taitel1976model}}
-Nel lavoto di \textcite{taitel1976model} (\figref{fig:taitel}) si propone una mappa per condotte orizzontali che nasce dalla combinazione di analisi analitiche e selezione empirica di numerosi parametri di riferimento. La mappa usa il \textit{parametro di Martinelli} \(\chi\), il \textit{numero di Froude} del gas \(Fr_G\) e i parametri \(T\) e \(K\).
+Nel lavoto di \textcite{taitel1976model} (\figref{fig:taitel}) si propone una mappa per condotte orizzontali che nasce dalla combinazione di analisi analitiche e selezione empirica di numerosi parametri di riferimento. La mappa usa il parametro di Martinelli \(\chi\), il numero di Froude del gas \(Fr_G\) e i parametri \(T\) e \(K\).
 
 \begin{figure}[htbp]
     \centering
@@ -354,7 +353,7 @@ Caratteristica principale di questa mappa di regime è l'impiego di diverse coor
 Tutti i modelli fin qui presentati sono stati sviluppati per flussi bifase in condizioni adiabatiche. Tuttavia questi modelli, tramite accorgimenti di natura analitica, posso risponde anche a condizioni diabatiche, cioè ipotizzando la condotta come sistema aperto in cui avviene scambio di calore con l'esterno. Lo studio dei regimi di flusso può quindi essere esteso, per esempio, negli impianti di refrigerazione oppure negli scambiatori termici.
 
 \subsection{Cadute di pressione per attrito di un flusso bifase}
-Si può semplificare lo studio del moto di un fluido bifase se si assume che le fasi siano ben miscelate fra loro, quindi come un unico fluido monofase. Il \textit{modello omogeneo} può essere applicato quando le fasi sono fortemente interdisperse tra loro, cioè quando entrambe le fasi hanno velocità superficiali sostenute. Le perdite di carico totali \(\Delta p_{tot}\) sono la somma delle perdite di carico statiche o gravitazionali \(\Delta p_s\), le perdite di carico della quantità di moto \(\Delta p_{mom}\) e le perdite di carico per attrito \(\Delta p_a\): 
+Si può semplificare lo studio del moto di un fluido bifase se si assume che le fasi siano ben miscelate fra loro, quindi come un unico fluido monofase. Il modello omogeneo può essere applicato quando le fasi sono fortemente interdisperse tra loro, cioè quando entrambe le fasi hanno velocità superficiali sostenute. Le perdite di carico totali \(\Delta p_{tot}\) sono la somma delle perdite di carico statiche o gravitazionali \(\Delta p_s\), le perdite di carico della quantità di moto \(\Delta p_{mom}\) e le perdite di carico per attrito \(\Delta p_a\): 
 \[\Delta p_{tot} = \Delta p_s +\Delta p_{mom} + \Delta p_a \addtag \label{eq:perditetot}\]
 La perdita di carico statico per un fluido bifase omogeneo è:
 \[\Delta p_s = \rho_H \; g \; z\ \addtag \]
@@ -362,7 +361,7 @@ dove \(z\) è la differenza di quota geodetica tra le sezioni di ingresso e usci
 \[\rho_H=\rho_L(1-\epsilon_H)+\rho_G \; \epsilon_H \addtag \label{eq:omogenea} \]
 Si determina la frazione di vuoto \(\epsilon_h\) in funzione del titolo di vapore \(x\):
 \[\epsilon_H = \left[ 1+ \left( \dfrac{w_G}{w_L} \dfrac{(1-x)}{x} \dfrac{\rho_G}{\rho_L} \right) \right]^{-1} \addtag \]
-dove il rapporto \(w_G/w_L\) è detto \textit{rapporto di slittamento} e ha valore unitario nel caso di flussi omogenei. Il gradiente di pressione della quantità di moto per unità di lunghezza del condotto è:
+dove il rapporto \(w_G/w_L\) è detto rapporto di slittamento e ha valore unitario nel caso di flussi omogenei. Il gradiente di pressione della quantità di moto per unità di lunghezza del condotto è:
 \[\left( \dfrac{dp}{dl} \right)_{mom}=\dfrac{d(j_{tot}/\rho_H)}{dz} \addtag \]
 Il punto cruciale del calcolo delle cadute di pressione per un flusso bifase risiede nella stima del termine di attrito, in questo frangente rappresentato dal numero di Fanning \(f\). Se si esprime la \eqref{eq:darcyweisbachP} in funzione del numero di Fanning \(f_{tot}\) per un flusso bifase, in funzione del flusso di massa \(j_{tot}\):
 \[\Delta p_a = \dfrac{2 \; f_{tot} \; j_{tot}^2}{\rho_{tot}} \; \dfrac{l}{D} \addtag \label{eq:darcyweisbachfanning2f} \]
