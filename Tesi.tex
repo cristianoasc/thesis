@@ -29,7 +29,7 @@
 \usepackage{acronym}
 \usepackage{hyperref}
 \usepackage{graphicx} %gestione immagini, anche vettoriali
-\usepackage{epstopdf} %per utilizzare eps nel file
+\usepackage[outdir=./fig/pdf_converted/]{epstopdf} %per utilizzare eps nel file
 \usepackage[position=bottom]{subfig}
 \usepackage[style=authoryear,sorting=nyt,maxcitenames=1,backend=bibtexu]{biblatex}   %%BIBLIOGRAFIA
 \usepackage{titlesec} %%Impostazione nuove sezioni
@@ -43,8 +43,8 @@
 \DeclareUnicodeCharacter{20AC}{\euro{}} %definizione simbolo € come "euro"
 \usepackage[]{xfrac} %pacchetto per frazioni oblique
 \usepackage{lscape} %pacchetto per pagine in orizzontale
-\usepackage{mathptmx} %carattere times
-
+%\usepackage{mathptmx} %carattere times
+\usepackage{frontespizio}
 
 
 \hypersetup{
@@ -118,7 +118,7 @@ pageanchor=true
 
 \begin{document}
 
-\input{tex/Frontespizio.tex}
+\input{tex/Frontespizio_NEW.tex}
 
 \input{tex/Dedica.tex}
 
