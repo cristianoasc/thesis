@@ -1,11 +1,12 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{Sistemi di piggaggio delle condotte in pressione}\thispagestyle{empty} 
+\chapter{Sistemi di piggaggio di condotte in pressione}\thispagestyle{empty} 
 \chaptermark{Piggaggio}
 Il piggaggio, o anche detto \textit{pigging}, è un'applicazione nella quale un dispositivo cilindrico o sferico chiamato scovolo (o \textit{pig}), opportunamente dimensionato, viene spinto all'interno di una condotta tramite variazioni indotte di pressione e flusso del mezzo presente all'interno, tramite l'introduzione di un mezzo esterno o tramite movimento meccanico al fine di pulire, ispezionare, dosare inibitori chimici lungo la tubazione oppure per isolare delle sezioni specifiche della rete.\\
 L'origine del termine inglese \textit{pig} è tuttora incerto: se da una parte viene proposto come l'acronimo di \textit{Pipeline Intervention Gadget}, dall'altra si fa riferimento al rumore che provoca lo scorrimento dello scovolo in condotta, simile al verso di un maiale \parencite{varghese2011intelligent}.\\
 Durante gli anni '40 negli Stati Uniti il piggaggio aveva come fine principale la rimozione di paraffina per migliorare l'efficienza delle condotte a olio, quindi per aumentare la produzione e sopperire all'alta domanda legata alle attività belliche della Seconda Guerra Mondiale.\\
-Nel mondo oggi il piggaggio è impiegato per numerosi scopi e la strumentazione  è progettata dagli ingegneri in base alle necessità legate all'applicazione. 
+Nel mondo oggi il piggaggio è impiegato per numerosi scopi e la strumentazione  è progettata dagli ingegneri in base alle necessità legate all'applicazione.\\
+Il seguente capitolo offre una panoramica riguardo al piggaggio delle condotte in pressione dove vengono mostrate le varie configurazioni degli scovoli, le finalità dell'applicazione, le procedure operative e la valutazione di soluzioni in caso di blocco del \textit{pig} in linea.
 
 \section{Configurazione degli scovoli}
 L'assemblaggio e configurazione dello scovolo di servizio prevede numerose soluzioni:
@@ -64,7 +65,7 @@ Gli scovoli a mandrino e a bullone singolo si adattano alla richiesta specifica 
 %    \subfloat[][Scovolo con spazzole circolari, guarnizioni a tazza e dischi.]
 %    {\includegraphics[height=.12\textheight]{fig/pig/tool/assemblato}  \label{fig:assemblato}}
 \caption{Componenti tipici di uno scovolo di servizio \parencite{williamson2015guide}.}
-\label{fig:configurazione}
+\label{fig:dispositivi}
 \end{figure}
 
 \section{Obiettivi del piggaggio}
@@ -81,24 +82,52 @@ Qui di seguito sono elencati i motivi legati generalmente all'impiego di scovoli
 
 \subsubsection{Pulizia}
 Gli scovoli pulenti sono impiegati per mantenere dei livelli di efficienza minimi in condotta. Nel settore degli idrocarburi, qualunque riduzione di portata corrisponde a un mancato introito giornaliero. La riduzione della portata è legata all'attrito e a fattori fisici. Nelle condotte a gas i problemi di produzione sono legati alla presenza di elementi corrosivi, detriti e depositi, polveri e condensati. Nel caso del greggio le condotte risentono della presenza di sabbia e paraffina adesa alle pareti interna della tubazione.\\
-Si valuta l'efficienza di una condotta tramite considerazioni tecniche su flusso, cadute di pressione e costi operativi. Nel momento in cui la condotta necessità di una pulizia interna, si inserisce uno scovolo  lungo il tratto interessato.\\
+Si valuta l'efficienza di una condotta tramite considerazioni tecniche su flusso, cadute di pressione e costi operativi. Nel momento in cui la condotta necessità di una pulizia interna, si inserisce uno scovolo lungo il tratto interessato.\\
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=.7\textwidth]{fig/pig/cleaning.eps}
 	\label{fig:cleaningpig}
 	\caption{Scorrimento dello scovolo di pulizia in condotta e rimozione dei depositi solidi in condotta \parencite{davidson2002introduction}.}
 \end{figure}
-La configurazione migliore del \textit{pig} pulente consiste in dischi, guarnizioni a tazza e spazzole radiali a molla o lame in poliuretano. I dischi consentono di spingere via i residui solidi oltre a fornire un buon supporto, le guarnizioni provvedono alla tenuta, le spazzole consentono la rimozione di ruggine, detriti e altri residui solidi mentre le lame sono impiegate in condotte a olio, grazie alla maggiore efficacia sulla paraffina e la facilità di pulizia al termine dell'applicazione. Nella pulizia di condotte con mezzi liquidi gli scovoli possono essere dotati di \textit{bypass}, ugelli longitudinali che convogliano del liquido in pressione da monte a valle, evitando così il deposito dei solidi sul fondo e riducendo la velocità di scorrimento del dispositivo.
+La configurazione migliore del \textit{pig} pulente consiste in dischi, guarnizioni a tazza e spazzole radiali a molla o lame in poliuretano (\figref{fig:assemblato}). I dischi consentono di spingere via i residui solidi oltre a fornire un buon supporto, le guarnizioni provvedono alla tenuta, le spazzole consentono la rimozione di ruggine, detriti e altri residui solidi mentre le lame sono impiegate in condotte a olio, grazie alla maggiore efficacia sulla paraffina e la facilità di pulizia al termine dell'applicazione (\figref{fig:paraffina}). \\
+Nella pulizia di condotte con mezzi liquidi gli scovoli possono essere dotati di \textit{bypass} (\figref{fig:bypass}), ugelli longitudinali che convogliano del liquido in pressione da monte a valle, evitando così il deposito dei solidi sul fondo e riducendo la velocità di scorrimento del dispositivo.\\
+Gli scovoli di pulizia tradizionali non agiscono propriamente sul materiale metallico come aste, bulloni o utensili lasciati dopo la messa in opera della condotta. Il modo più efficace consiste nell'installazione di nastri magnetici lungo il corpo dello scovolo (\figref{fig:magnetipulizia}). 
 
+\begin{figure}[htbp]
+    \centering
+    \subfloat[][Scovolo con spazzole circolari, guarnizioni a tazza e dischi.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/cleaning/assemblato}}  \label{fig:assemblato}}\qquad
+    \subfloat[][Scovolo a lame con paraffina adesa.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/cleaning/paraffina}}  \label{fig:paraffina}}\\
+    \subfloat[][Ugelli di \textit{bypass}.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/cleaning/bypass}}  \label{fig:bypass}}\qquad
+    \subfloat[][Scovolo per la pulizia dei residui metallici.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/cleaning/magnetipulizia}}  \label{fig:magnetipulizia}}
+\caption{Dispositivi di pulizia delle condotte \parencite{williamson2015guide}.}
+\label{fig:dispositivipulizia}
+\end{figure}
 
 \subsubsection{Spiazzamento}
 Per spiazzamento della condotta si intende la completa sostituzione di un mezzo fluido con un altro. Gli scovoli di spiazzamento o separazione, tramite meccanismi di spinta e di tenuta, consentono di effettuare queste operazioni. Numerose sono le operazioni che necessitano l'impiego di questi dispositivi.\\
 I test di tenuta idraulica di una condotta prevedono lo spurgo totale, il riempimento con acqua e la pressurizzazione della linea per un determinato periodo di tempo tramite scovoli di spiazzamento. Altri impieghi sono la separazione tra idrocarburi e gas inerte per poter effettuare riparazioni sul campo o lo spiazzamento di liquidi indesiderati da linee a gas.\\
-La configurazione generica è rappresentata dagli scovoli a quattro tazze di tenuta, tenute in contatto con le pareti della condotta. Per ovviare alle variazioni di diametro interno, si utilizzano delle guarnizioni a tazza a più labbra di tenuta (\textit{multi-lipped cup}).\\
-Alcuni scovoli a schiuma consentono dei buoni livelli di tenuta idraulica per distanze medio-brevi con una spesa relativamente bassa.\\
-Gli scovoli a dischi bidirezionali sono tipicamente usati nelle operazioni di riempimento e spiazzamento acqua in condotta, associati quindi ai test di tenuta. La possibilità di agire in direzione doppia consentono la ricollocazione del dispositivo in posizione iniziale nel caso in cui si preveda la possibilità di blocco in condotta.\\
-Le sfere sono la soluzione ideale per la rimozione di liquidi da linee a gas. I sistemi di piggaggio a sfere sono progettati per il lancio e la ricezione in automatico, con un numero di sfere che può variare in base alle richieste specifiche. Sul punto di ricezione, si prevede l'installazione di uno \textit{slug catcher} per ovviare al volume di liquido associato alle sfere. Le condotte a gas sono normalmente progettate per l'uso di sfere, ciò non vuol dire che possano essere piggabili da scovoli convenzionali.\\
-Schiume a bassa densità sono impiegate per asciugare la condotta dopo l'operazione di spiazzamento d'acqua. Questi \textit{pig} hanno come unico svantaggio la possibilità di potersi bloccare in opera.\\
+La configurazione generica è rappresentata dagli scovoli a quattro tazze di tenuta, tenute in contatto con le pareti della condotta. Per ovviare alle variazioni di diametro interno, si utilizzano delle guarnizioni a tazza a più labbra di tenuta (\textit{multi-lipped cup}, \figref{fig:displacement-multilipped}).\\
+Gli scovoli a dischi bidirezionali (\figref{fig:displacement-bidirezionale}) sono tipicamente usati nelle operazioni di riempimento e spiazzamento acqua in condotta, associati quindi ai test di tenuta. La possibilità di agire in direzione doppia consente la ricollocazione del dispositivo in posizione iniziale nel caso in cui si preveda un possibile blocco in condotta.\\
+Le sfere (\figref{fig:displacement-unisphere}) sono la soluzione ideale per la rimozione di liquidi da linee a gas. I sistemi di piggaggio a sfere sono progettati per il lancio e la ricezione in automatico, con un numero di sfere che può variare in base alle richieste specifiche. Sul punto di ricezione, si prevede l'installazione di uno \textit{slug catcher} per ovviare al volume di liquido associato alle sfere. Le condotte a gas sono normalmente progettate per l'uso di sfere, ciò non vuol dire che possano essere piggabili da scovoli convenzionali.\\
+Schiume a bassa densità senza rivestimento (\figref{fig:displacement-schiuma}) sono impiegate per asciugare la condotta dopo l'operazione di spiazzamento d'acqua. Questi \textit{pig} hanno come unico svantaggio la possibilità di potersi bloccare in opera.\\
+ 
+\begin{figure}[htbp]
+    \centering
+    \subfloat[][Guarnizione a tazza a più labbra di tenuta.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/displacement/multilipped}}  \label{fig:displacement-multilipped}}\qquad
+    \subfloat[][Scovolo a dischi bidirezionale.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/displacement/bidirezionale}}  \label{fig:displacement-bidirezionale}}\\
+    \subfloat[][Sfere UNISPHERE™.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/displacement/unisphere}}  \label{fig:displacement-unisphere}}\qquad
+    \subfloat[][Scovoli a schiuma senza rivestimento a bassa densità.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/displacement/schiuma-norivestimento}}  \label{fig:displacement-schiuma}}
+\caption{Diverse tipologie di trappole di lancio \parencite{williamson2015guide}.}
+\label{fig:displacement-tools}
+\end{figure} 
  
 \subsubsection{Separazione dei fluidi}
 In alcune applicazioni si richiede l'immissione di uno o più prodotti separatamente. Nella condotta si possono creare delle condizioni di "contaminazione" a causa di:
@@ -112,8 +141,8 @@ Al fine di ovviare al contatto tra i diversi prodotti, si impiegano in condotta 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{fig/pig/batching.eps}
+	\caption{Desalinizzazione della condotta con treni di acqua dolce e glicol \parencite{davidson2002introduction}.}
 	\label{fig:batching}
-	\caption{Desalinizzazione della condotta con treni di acqua dolce, glicol e azoto in successione \parencite{davidson2002introduction}.}
 \end{figure}
 
 Gli scovoli impiegati per la separazione di prodotti sono gli stessi per lo spiazzamento: in particolar modo si parla di guarnizioni a tazza, coppelle coniche e dischi bidirezionali.
@@ -126,9 +155,9 @@ Lo scovolo calibro (\figref{fig:caliper}) è utile alla misurazione della geomet
 \begin{figure}[htbp]
     \centering
     \subfloat[][Scovolo a piastra spessimetrica.]
-    {\makebox[0.3\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/gauging}}  \label{fig:gauging}} \qquad
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/gauging}}  \label{fig:gauging}} \qquad
     \subfloat[][Scovolo calibro.]
-    {\makebox[0.3\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/caliper}}  \label{fig:caliper}}
+    {\makebox[0.45\textwidth]{\includegraphics[height=.12\textheight]{fig/pig/caliper}}  \label{fig:caliper}}
 \caption{Scovoli di ispezione interna tradizionali \parencite{williamson2015guide}.}
 \label{fig:internalinspection}
 \end{figure}
@@ -145,15 +174,15 @@ L'alternativa all'MFL consiste nell'impiego di misure a ultrasuoni. In questo ca
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=.6\textwidth]{fig/pig/smartpig}
-	\label{fig:smartpig}
 	\caption{Scovolo a dispersione di flusso magnetico \parencite{williamson2015guide}.}
+	\label{fig:smartpig}
 \end{figure}
 
 La ricerca nel settore degli scovoli intelligenti è molto attiva e le soluzioni in commercio sono innumerevoli. Fra queste troviamo i \textit{pig} a neutroni, utili per rilevare nelle condotte sottomarine le sezioni non più sotterrate (\textit{span}). Le aree a contatto con l'acqua sono soggette a maggiori fenomeni di danneggiamento. Nella pratica comune vengono impiegati degli strumenti esterni per rilevare degli \textit{span}, attraverso lo scovolo a neutroni si riducono il numero di indagini e si migliora l'accuratezza dell'analisi.\\
 Altri esempi includono delle videocamere montate sullo scovolo, impiegate per l'ispezione interna visuale oppure scovoli per il rilevamento di curvature in condotte nelle aree artiche, corrispondenti a sollecitazioni locali causate dalle differenze di temperatura.
 
 \subsection{Scovoli gel}
-In questo caso non si parla di dispositivi di forma propria, bensì di sistemi a base di liquidi gelificati che sono sviluppati per le operazioni ausiliare in condotta come avvio della produzione, operazioni di supporto agli scovoli tradizionali o programmi di mantenimento.\\
+In questo caso non si parla di dispositivi di forma propria, bensì di sistemi a base di liquidi gelificati (\figref{fig:gelpig}) che sono sviluppati per le operazioni ausiliare in condotta come avvio della produzione, operazioni di supporto agli scovoli tradizionali o programmi di mantenimento.\\
 La maggior parte dei gel impiegati sono a base acqua, tuttavia possono essere anche a base di glicol, metanolo o altre sostanze liquida a seconda delle esigenze tecniche.\\
 I tipi di scovoli gel disponibili sono:
 \begin{itemize}
@@ -167,53 +196,166 @@ I principi applicativi degli scovoli gel vanno dalla separazioni delle diverse f
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{fig/pig/gelpig}
-	\label{fig:gelpig}
+	\includegraphics[width=.7\textwidth]{fig/pig/gelpig}
 	\caption{Scovolo gel EVO-Pig, Aubin Ltd \parencite{johnston2015breaking}.}
+	\label{fig:gelpig}
 \end{figure}
 
 
 %-------------------------------------------------------------------
 
+\section{Procedure di lancio e recupero del pig}
+Gli scovoli possono essere inseriti direttamente in condotta tramite dispositivi a spola. Tuttavia l'immissione e il recupero del \textit{pig} in condotta avviene normalmente tramite trappole di lancio e di ricezione. La scelta delle trappole di lancio e di ricezione dipende da numerosi fattori.\\
+Le trappole sottomarine e quelle su terraferma hanno configurazione diversa. Si richiedono inoltre dispositivi di sicurezza addizionali al fine di garantire la sicurezza nelle operazioni. Dal rispetto della sequenza operativa nell'apertura e chiusura delle valvole della trappola dipende la probabilità di successo dell'applicazione: un'errata apertura o regolazione di una valvola può portare al blocco dello scovolo in condotta.\\
+Le tipologia e la dimensione dello scovolo condizionano la scelta di una trappola di lancio o di ricezione. Nel caso di impiego di sfere le trappole possono essere più corte rispetto a quelle dedicate agli scovoli a mandrino. Al contrario, con l'impiego di scovoli intelligenti, la lunghezza richiesta aumenta notevolmente.\\
+In molti casi le operazioni di piggaggio avvengono con il lancio di più scovoli contemporaneamente: ciò prevede l'utilizzo di organi di lancio e ricezione che possano contenere tutte le unità immesse nella condotta, aumentando così la lunghezza richiesta per la trappola.\\
+Le trappole possono essere installate in modo permanente o temporaneo. In questo caso la configurazione cambia in modo sostanziale, così come i dispositivi di chiusuiura. Le trappole temporanee possono avere una chiusura semplice a flange, le trappole permanenti tendono a prediligere l'utilizzo di portelloni di chiusura rapida (\figref{fig:chiusuratrappola}).
+\begin{figure}[htbp]
+    \centering
+    \subfloat[][Chiusura a anello con morsetto.]
+    {\makebox[0.45\textwidth]{\includegraphics[width=.3\textwidth]{fig/pig/chiusura/anellomorsetto}}  \label{fig:anellomorsetto}} \qquad
+    \subfloat[][Chiusura con rivestimento filettato.]
+    {\makebox[0.45\textwidth]{\includegraphics[width=.3\textwidth]{fig/pig/chiusura/filettato}}  \label{fig:filettato}}
+\caption{Dispositivi di chiusura a portelloni delle trappole di lancio e ricezione \parencite{williamson2015guide}.}
+\label{fig:chiusuratrappola}
+\end{figure}
+La configurazione della trappola si adatta al metodo di lancio degli scovoli in condotta. Un treno di più \textit{pig} può essere lanciato assieme oppure individualmente a intervalli stabiliti, interrompendo più volte il flusso del fluido di spinta per inserire un nuovo scovolo. Lo stesso scovolo può essere introdotto senza interrompere la produzione, pareggiando di volta in volta le condizioni di pressione della trappola con la condotta interessata.\\
+Una tipica trappola di lancio (\figref{fig:piglauncher}) prevede le seguenti valvole installate:
+\begin{itemize}
+    \item \textbf{valvola di \textit{bypass}} (\textbf{\textit{mainline bypass valve}}): la valvola principale regola il passaggio del flusso per la trappola o meno;
+    \item \textbf{valvola di ventilazione} (\textit{\textbf{vent valve}}): l'apertura e la chiusura regolano le condizioni di pressione nella trappola, consentono la depressurizzazione per l'inserimento dello scovolo in sicurezza;
+    \item \textbf{valvola di drenaggio} (\textit{\textbf{drain valve}}: utile al drenaggio per gravità del liquido all'interno della trappola, non necessaria se il mezzo di propulsione è a gas;
+    \item \textbf{valvola di piggaggio} (\textit{\textbf{pigging valve}}: mantiene lo scovolo all'interno della trappola fino alla sua apertura; 
+    \item \textbf{valvola di kick} (\textit{\textbf{trap kicker valve}}): l'apertura della valvola conferisce la spinta idraulica necessaria allo scovolo per scorrere nella condotta;
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=.7\textwidth]{fig/pig/launcher.eps}
+	\caption{Configurazione base di una trappola di lancio \parencite{davidson2002introduction}.}
+	\label{fig:piglauncher}
+\end{figure}
+
+Le trappole di ricezione sono leggermente dai sistemi di lancio. La differenza sostanziale risiede nella lunghezza della trappola e la collocazione degli indicatori di posizione, necessari in entrambi i dispositivi per verificare l'avvenuto lancio o ricezione degli scovoli.
+
+\subsection{Esempi di configurazione di sistemi di piggaggio}
+Le trappole di lancio e di ricezione possono apparire simili nella configurazione, ma sul campo sono nettamente diversi appunto per la variazione di geometria richiesta per le due applicazioni. I sistemi di piggaggio sono progettati per adattarsi alle specifiche della condotta e per svolgere diverse operazioni nel tempo. I sistemi di lancio/ricezione possono essere pensati in numerosi modi:
+\begin{itemize}
+\item \textbf{lancio verticale} (\figref{fig:launcher-verticale}): lancio di scovoli in posizione verticale, possibilità di automatizzare il processo;
+\item \textbf{lancio standard del \textit{pig}} (\figref{fig:launcher-standard}): è possibile il lancio di un solo pig alla volta;
+\item \textbf{lancio doppio o duale} (\figref{fig:launcher-duale}): combinazione di due trappole in parallelo su due condotte diverse, ma racchiuse in un unico sistema. Sistemi di questo tipo sono utilizzati dove si richiede il minore ingombro possibile, come in ambito \textit{off-shore};
+\item \textbf{sistema di batch automatico} (\figref{fig:launcher-automatico-batch}): sistema automatizzato di lancio di treni di \textit{slug} interfacciati da degli scovoli di separazione;
+\item \textbf{lancio inclinato} (\figref{fig:launcher-inclinato}): principio simile alle trappole verticali, la maggiore distanza di lancio consente un maggiore controllo dello scovolo in immissione;
+\item \textbf{lancio combinato \textit{pig}/sfera} (\figref{fig:launcher-combo}): per esempio, nello spiazzamento dell'acqua tramite sfere e la deidratazione tramite scovoli a schiuma;
+\item \textbf{sistemi di piggaggio automatico} (\figref{fig:launcher-automatico-pig}): sistemi totalmente automatizzati, capaci di inviare da remoto diversi tipi di scovolo (sfere, scovoli, etc.). Agli alti costi iniziali e operativi fa fronte l'alta efficienza delle applicazioni;
+\item \textbf{sistemi di lancio per \textit{pig} di ispezione in linea} (\figref{fig:launcher-ispezione}): simili alle trappole convenzionali ma con camere di recupero molto più lunghe, per via delle dimenzioni dello scovolo di ispezione interna.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[][Trappola di lancio verticale.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.17\textheight]{fig/pig/launcher/verticale}}  \label{fig:launcher-verticale}}\qquad
+    \subfloat[][Trappola di lancio standard.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.15\textheight]{fig/pig/launcher/standard}}  \label{fig:launcher-standard}}\\
+    \subfloat[][Trappola di lancio duale.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.15\textheight]{fig/pig/launcher/duale}}  \label{fig:launcher-duale}}\qquad
+    \subfloat[][Sistema di \textit{batching} in automatico.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.15\textheight]{fig/pig/launcher/automatico-batch}}  \label{fig:launcher-automatico-batch}}\\
+    \subfloat[][Trappola di lancio inclinata.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.15\textheight]{fig/pig/launcher/inclinato}}  \label{fig:launcher-inclinato}}\qquad
+    \subfloat[][Trappola per il lancio combinato scovolo/sfere.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.13\textheight]{fig/pig/launcher/combo}}  \label{fig:launcher-combo}}\\
+    \subfloat[][Sistema di piggaggio automatico.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.15\textheight]{fig/pig/launcher/automatico-pig}}  \label{fig:launcher-automatico-pig}}\qquad
+    \subfloat[][Trappola di lancio per ispezione in linea.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.15\textheight]{fig/pig/launcher/ispezione}}  \label{fig:launcher-ispezione}}\\
+\caption{Diverse tipologie di trappole di lancio \parencite{williamson2015guide}.}
+\label{fig:launcher-tipologie}
+\end{figure}
+%--------------------------------------------------------------------------
+\section{Mezzo di spinta del piggaggio}
+In linea di massima si preferisce sospingere lo scovolo tramite un fluido incomprimibile. I liquidi incomprimibili consentono un maggiore controllo della velocità del \textit{pig} e minore usura delle guarnizioni, ottimizzando quindi l'efficacia e la tenuta idraulica dello strumento. Liquidi come acqua, olio o prodotti chimici e di processo possono essere utilizzati come mezzi di spinta. Gli organi di tenuta idraulica devono essere idonei con l'utilizzo di tale mezzo liquido.\\
+I gas, essendo comprimibili, acquistano notevole energia in forma di pressioni prima che lo scovolo cominci a scorrere lungo la condotta. L'impiego di mezzi gassosi deve tenere conto di questi aumenti di pressione in condotta. Un apporto non sufficiente di gas, quindi una pressione non adeguata a monte dello scovolo,  può generare un movimento del dispositivo a scatti (\textit{stop-start motion}). L'effetto può essere attenuato con il giusto dimensionamento e mantenendo la contropressione a monte costante al fine di mantenere la velocità dello scovolo costante. Quando si impiegano dei gas come mezzi di spinta, è importare ricordare un possibile aumento dell'usura degli organi di tenuta. \\
+Quando il mezzo di spinta consiste in un fluido multifase, si devono tenere in considerazione gli aspetti legati ai mezzi comprimibili e incomprimibili. L'impiego di più fasi possono generare flussi a \textit{slug} e le condotte, così come le trappole, devono essere progettate per questa applicazione (e.g. installazione di \textit{slug catcher} in prossimità della trappola di ricezione).
+
+%--------------------------------------------------------------------------
+
 \section{Progettazione del sistema di condotte per il piggaggio}
 Il sistema deve essere progettato in modo tale da evitare imprevisti nelle operazioni di piggaggio. Di conseguenza ci sono degli importanti elementi di design da tenere in considerazione.
 \subsection{Lunghezza del cammino del pig}
+La distanza tra le varie trappole dislocate su una linea è determinata dalla lunghezza della condotta e dalla possibilità di installazione degli organi di lancio e di ricezione. La distanza massima percorribile da uno scovolo dipende dal tipo di mezzo di spinta dello scovolo:
+\begin{itemize}
+    \item 160 km per linee a gas;
+    \item 240 km per linee di produzione (multifase);
+    \item 320 km per linee a olio.
+\end{itemize}
+Le distanze massime percorribili dallo scovolo sono riferite non allo spostamento fisico, bensì al percorso massimo con livelli minimi di efficacia del piggaggio. Come già detto in precedenza le linee a gas sono molto più abrasive e tendono a consumare più velocemente gli organi di tenuta. Le linee a olio offrono una lubrificazione naturale del dispositivo, garantendo una distanza doppia rispetto a quelle a gas.
+
 \subsection{Raggio di curvatura}
+Ogni scovolo è progettato per attraversare determinati raggi di curvatura minimi della condotta. Assieme al raggio di curvatura si fa riferimento all'angolo di curvatura, riferito al cambio di direzione della linea. In questo ambito i raggi di curvatura sono espressi in R/D, rapporto tra il raggio di curvatura e il diametro nominale della condotta. Solitamente si fa riferimento a 1,5 R/D per condotte a gas, 3 R/D per condotte a olio e 1 R/D per piccole condotte di raffineria.
 \subsection{Tipologia di valvole presenti}
+Le valvole a sfera moderne, o rubinetti sferici, garantiscono il passaggio degli scovoli lungo la linea. In presenza però di rubinetti sferici di vecchia generazione, quindi non progettati per il piggaggio della condotta, può accadere il blocco del dispositivo (\figref{fig:pig-rubinettosfera}). Al fine di prevenire il blocco deve essere tenuta in stretta considerazione la dimensione della sede della valvola in rapporto alla lunghezza dello scovolo.\\
+In presenza di valvole di ritegno, lo scovolo deve essere abbastanza grande da oltrepassare la valvola e mantenerla completamente aperta. Scovoli e sfere troppo piccole possono permanere nella sede della valvola, mantenendola aperto e bypassando di fatto il dispositivo (\figref{fig:pig-nonritorno}).
+\begin{figure}[htbp]
+    \centering
+    \subfloat[][Blocco dello scovolo in valvola a sfera.]
+    {\makebox[0.4\textwidth]{\includegraphics[height=.22\textheight]{fig/pig/rubinettosfera.eps}}  \label{fig:pig-rubinettosfera}}\qquad
+    \subfloat[][Blocco della sfera in valvola di ritegno.]
+    {\makebox[0.4\textwidth]{\includegraphics[height=.2\textheight]{fig/pig/nonritorno.eps}}  \label{fig:pig-nonritorno}}\\
+    \caption{Blocco degli scovoli in corrispondenza di valvole \parencite{guadagni2003prontuario}.}
+    \label{fig:piggaggio-valvole}
+\end{figure}
+
 \subsection{Indicatori di passaggio del pig}
-\subsection{Raccordi}
-\subsection{Condotte laterali}
-\subsection{Raggio interno di condotta}
-\subsection{Condotte a doppio diametro}
+Gli indicatori di passaggio dello scovolo sono utilizzati per rilevare l'attraversamento del \textit{pig} per un determinato punto della condotta, oppure per verificare l'avvenuto lancio o ricezione. Gli indicatori sono importanti nei sistemi automatizzati di piggaggio poiché sono collegati alle valvole e alle stazioni di pompaggio, le quali si attivano una volta giunto lo scovolo in posizione.
 
+\begin{figure}[htbp]
+    \centering
+    \subfloat[][Indicatore di posizione a bandierina.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.10\textheight]{fig/pig/indicatori/passaggio}}  \label{fig:indicatori-passaggio}}\qquad
+    \subfloat[][Indicatori di posizione elettronici a bandierina.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.10\textheight]{fig/pig/indicatori/elettrici}}  \label{fig:indicatori-elettrici}}\\
+    \subfloat[][Indicatore di posizione magnetico.]
+    {\makebox[0.45\textwidth]{\includegraphics[height=.17\textheight]{fig/pig/indicatori/magnetici}}  \label{fig:indicatori-magnetici}}
+    \caption{Indicatori di posizione dello scovolo in condotta \parencite{williamson2015guide}.}
+    \label{fig:indicatori-piggaggio}
+\end{figure}
 
-\section{Procedure di lancio e recupero del pig}
+\subsection{Altri dettagli progettuali}
+I raccordi a T (\textit{tee}), la cui condotta di ingresso supera la metà del diametro della condotta principale, richiedono l'installazione di guide, al fine di prevenire il bloccaggio dello scovolo. Le guide possono essere di varia natura, come \textit{coupon} o \textit{tee barred}. Inoltre si evitano l'installazione di raccordi a T adiacenti l'un l'altro.\\
+Le condotte laterali possono essere installate, lo scovolo in questo caso deve avere lunghezza superiore alla sede di immissione della condotta.\\
+Delle variazioni drastiche del diametro interno vanno evitate. Lo scovolo deve essere adatto alle variazioni di dimensione interna e deve garantire la tenuta in tutte le sezioni interessate dal piggaggio. La stessa considerazione deve essere effettuata per linee costituite da condotte con diametro nominale diverso. 
 
-\subsection{Condotte a liquido}
-\subsubsection{Procedure di lancio pig per condotte a liquido}
-\subsubsection{Procedure di recupero pig per condotte a liquido}
-
-\subsection{Condotte a gas}
-\subsubsection{Procedure di lancio pig per condotte a gas}
-\subsubsection{Procedure di recupero pig per condotte a gas}
-
-\subsection{Esempi di configurazione di sistemi di piggaggio}
-\subsubsection{Lancio verticale}
-\subsubsection{Lancio standard del pig}
-\subsubsection{Lancio doppio o duale}
-\subsubsection{Sistema di batch automatico}
-\subsubsection{Lancio inclinato}
-\subsubsection{Lancio combinato pig/sfera}
-\subsubsection{Sistemi di piggaggio automatico}
-\subsubsection{Lancio del pig di ispezione in linea}
-
-\section{Piggaggio di una condotta onstream con mezzo gassoso o idrocarburi raffinati}
-\subsection{Scelta del pig}
-\subsection{Velocià}
-\subsection{Frequenza}
-\subsection{Prestazioni}
-
-\section{Bloccaggio del pig o "stuck pig"}
+\section{Bloccaggio dello scovolo}
+Il piggaggio presenta in generale determinati rischi: a prescindere dalle precauzioni prese, esiste sempre una minima probabilità che questo evento accada. Il blocco dello scovolo in condotta (\textit{stuck pig}) può creare ostruzione completa (\textit{full stuck pig}) interrompendo la produzione e causando notevoli danni. La chiusura può essere parziale (scovolo in \textit{bypass}): le conseguenze non sono immediate e occorre in ogni modo rimuovere il dispositivo incastrato in condotta.\\
+La condizione di \textit{stuck pig} è caratterizzata da:
+\begin{itemize}
+	\item bassa frequenza dell'evento;
+	\item cause difficilmente identificabili;
+	\item una soluzione non idonea può portare al peggioramento delle condizioni iniziali.
+\end{itemize}
+In caso di blocco dello scovolo si devono limitare azioni impulsive, individuare la soluzione finale certa per la risoluzione del problema, pianificare diversi tentativi per comprendere la soluzione migliore in termine di tempi e costi.
 \subsection{Soluzioni}
+Ogni possibile soluzione da adottare richiede delle condizioni al contorno da soddisfare, delle precise procedure e sequenze operative da seguire e degli effetti, cioè le conseguenze che l'applicazione può apportare. Le soluzioni possono essere classificate in:
+\begin{itemize}
+	\item \textbf{preliminari}: verifica della situazione e dello stato del problema;
+	\item \textbf{di tentativo}: la soluzione può risolvere o meno il blocco;
+	\item \textbf{di localizzazione}: per comprendere la posizione dello scovolo, a volte possono portare allo sblocco non programmato;
+	\item \textbf{meccaniche}: interventi meccanici puntuali sulla tubazione o su un tratto più o meno esteso;
+	\item \textbf{ausiliarie}: tentativo di mitigazione del problema (e.g. passaggio dalla condizione di \textit{full stuck pig} a quella di scovolo in \textit{bypass}).
+\end{itemize}
+
 \subsection{Fasi operative}
-\subsection{Sviluppo futuro}
+Il primo step per l'analisi della procedura di sblocco più idonea prevede la raccolta dei dati inerenti le condizioni di impianto, le caratteristiche del fluido e dello scovolo. Conoscendo le condizioni al contorno iniziali si scartano le soluzioni non applicabili nel determinato contesto\\
+Il secondo step consiste nella valutazione delle diverse soluzioni possibili, valutando quella che minimizza tempi e costi. Questa soluzione di riferimento sarà l'elemento base per l'elaborazione in seguito di alternative possibili. \'E importante comprendere le probabilità di insuccesso e gli effetti negativi associati alla soluzione di riferimento, utile alla formulazione di una stima dei tempi e costi della procedura di sblocco.\\
+Dalla soluzione di riferimento si esaminano tutte le soluzioni di tentativo che possano aumentare la probabilità di riuscita della procedura. Alcune soluzioni di tentativo possono portare all'effetto opposto, sancendo l'inapplicabilità della soluzione di riferimento.\\
+Una volta prese in considerazione le soluzioni di tentativo e quella di riferimento, si studiano nel complesso le varie combinazioni in sequenza temporale e si comprende quale successione possa avere più probabilità di successo. Le sequenze di soluzioni con un costo complessivo medio-basso rispetto alla soluzione di riferimento sono considerate valide alternative a quella principale.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{fig/pig/blocco.eps}
+	\caption{Possibili cause e soluzioni legate all'arresto di \textit{pig} in linea \parencite{diluvio2006questione}.}
+	\label{fig:bloccopig}
+\end{figure}
+
+Il piggaggio come soluzione di ripristino delle condizioni ottimali in condotta necessita di numerosi accorgimenti e la condotta deve essere predisposta allo scorrimento dello scovolo al suo interno.Il blocco dello scovolo in linea può comportare a conseguenze importanti sull'impianto, oltre che all'interruzione della produzione. Molte volte la condotta non è piggabile a causa della configurazione della linea o alla bassa resistenza alle sollecitazioni meccaniche che l'applicazione può comportare. Una valida alternativa nell'ambito dello spiazzamento di liquidi in condotte a gas è rappresentata dall'impiego di tensioattivi in orizzontale: l'applicazione, seppur di recente realizzazione, sembra avere un'ottima efficacia ovviando ai problemi legati al piggaggio in linea.
