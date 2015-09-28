@@ -1,9 +1,6 @@
 \documentclass[a4paper,12pt,openright,twoside,titlepage]{report} 
-
 % oneside - solo fronte, twoside - fronte retro
-% openright - prima pagina dei capitoli su pagina destra, openany - indifferentemente
-%
-
+% openright - prima pagina dei capitoli su pagina destra, openany - indifferentement
 \usepackage[bottom]{footmisc}
 \usepackage{fancyhdr}
 \usepackage{url}
@@ -12,9 +9,15 @@
 \usepackage{amsfonts}                 %Pacchetto per inserire i caratteri matematici
 \usepackage{makeidx}                  %Pacchetto per generare l'indice analitico
 %\usepackage[utf8x]{inputenc}         %Pacchetto per poter inserire direttamente nel testo%lettere accentate. Se si scrive in inglese si può commentare
+\usepackage[T1]{fontenc}              %Pacchetto che gestisce l'encoding T1
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
-\usepackage[T1]{fontenc}              %Pacchetto che gestisce l'encoding T1
+
+\usepackage{lmodern}
+\usepackage{bold-extra}
+\normalfont %to load T1lmr.fd 
+\DeclareFontShape{T1}{lmr}{bx}{sc} { <-> ssub * cmr/bx/sc }{}
+
 \usepackage[english,italian]{babel}   %Pacchetto per la sillabazione delle parole in italiano e in inglese
 %\usepackage[Sonny]{fncychap}         %Pacchetto per avere diversi tipi di titoli di capitolo diversi.  Commentare se si desidera avere i titoli in maniera normale. Gli stili possibili sono 2: Sonny, Lenny
 \usepackage{enumitem}
@@ -29,7 +32,7 @@
 \usepackage{acronym}
 \usepackage{hyperref}
 \usepackage{graphicx} %gestione immagini, anche vettoriali
-\usepackage[outdir=./fig/pdf_converted/]{epstopdf} %per utilizzare eps nel file
+\usepackage[outdir=./build/pdf_converted/]{epstopdf} %per utilizzare eps nel file
 \usepackage[position=bottom]{subfig}
 \usepackage[style=authoryear,sorting=nyt,maxcitenames=1,backend=bibtexu]{biblatex}   %%BIBLIOGRAFIA
 \usepackage{titlesec} %%Impostazione nuove sezioni
@@ -46,6 +49,10 @@
 %\usepackage{mathptmx} %carattere times
 \usepackage{frontespizio}
 
+\usepackage{emptypage}
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} 
+\AtBeginDocument{\addtocontents{lof}{\protect\thispagestyle{empty}}} 
+\AtBeginDocument{\addtocontents{lot}{\protect\thispagestyle{empty}}} 
 
 \hypersetup{
 pdftitle={},%
@@ -135,8 +142,8 @@ pageanchor=true
 %\input{tex/Terminologia.tex}
 %\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}\bfseries{\thepage}}
 %\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
-\rhead[\fancyplain{}{\bfseries\scshape\chaptername\ \thechapter}]{\fancyplain{}\bfseries{\thepage}}
-\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\scshape\leftmark}}
+\rhead[\fancyplain{}{\bfseries \scshape \leftmark}]{\fancyplain{}\bfseries{\thepage}}
+\lhead[\fancyplain{}{\bfseries \thepage}]{\fancyplain{}{\bfseries \scshape \chaptername\ \thechapter}}
 
 
 
