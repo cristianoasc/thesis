@@ -7,6 +7,7 @@ Indice}}
 \thispagestyle{empty}    \tableofcontents             %crea l'indice
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \rhead[\fancyplain{}{\bfseries\scshape
 Elenco delle figure}]{\fancyplain{}{\thepage}}
@@ -25,3 +26,20 @@ Elenco delle tabelle}}
 \listoftables                           %crea l'elenco delle tabelle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 \clearpage{\pagestyle{empty}\cleardoublepage}
+
+\rhead[\fancyplain{}{\bfseries\scshape
+Lista delle abbreviazioni}]{\fancyplain{}{\thepage}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\bfseries\scshape
+Lista delle abbreviazioni}}
+
+\printnomenclature  %crea la lista dei simboli
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\rhead[\fancyplain{}{\bfseries\scshape
+%Lista delle abbreviazioni}]{\fancyplain{}{\thepage}}
+%\lhead[\fancyplain{}{\thepage}]{\fancyplain{}%{\bfseries\scshape
+%Lista delle abbreviazioni}}
+%\printnomenclature
+%\clearpage{\pagestyle{empty}\cleardoublepage}

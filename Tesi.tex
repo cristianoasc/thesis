@@ -12,7 +12,6 @@
 \usepackage[T1]{fontenc}              %Pacchetto che gestisce l'encoding T1
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
-
 \usepackage{lmodern}
 \usepackage{bold-extra}
 \normalfont %to load T1lmr.fd 
@@ -49,10 +48,18 @@
 %\usepackage{mathptmx} %carattere times
 \usepackage{frontespizio}
 
+\usepackage[noprefix]{nomencl}
+\usepackage{multicol}
+\makenomenclature
+\renewcommand{\nomname}{Nomenclatura}  
+\renewcommand{\nompreamble}{\thispagestyle{empty}}
+
 \usepackage{emptypage}
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} 
 \AtBeginDocument{\addtocontents{lof}{\protect\thispagestyle{empty}}} 
 \AtBeginDocument{\addtocontents{lot}{\protect\thispagestyle{empty}}} 
+%\AtBeginDocument{\addtocontents{nom}{\protect\thispagestyle{empty}}} 
+
 
 \hypersetup{
 pdftitle={},%
@@ -64,7 +71,8 @@ pdfborder={0 0 0},
 %linktocpage=true,%
 pageanchor=true
 }                 %Pacchetto per inserire i riferimenti ipertestuali
-\addbibresource{tex/Bibliografia.bib} 
+\addbibresource{tex/Bibliografia.bib}
+\renewcommand{\bibsetup}{\thispagestyle{empty}}
 %
 \oddsidemargin=20pt \evensidemargin=30pt%impostano i margini
 %\hyphenation{sil-la-ba-zio-ne pa-ren-te-si}%serve per la sillabazione: tra parentesi 
@@ -142,14 +150,17 @@ pageanchor=true
 %\input{tex/Terminologia.tex}
 %\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}\bfseries{\thepage}}
 %\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
-\rhead[\fancyplain{}{\bfseries \scshape \leftmark}]{\fancyplain{}\bfseries{\thepage}}
-\lhead[\fancyplain{}{\bfseries \thepage}]{\fancyplain{}{\bfseries \scshape \chaptername\ \thechapter}}
+
 
 
 
 \pagenumbering{arabic}                  %mette i numeri arabi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tex/Introduzione.tex}
+\input{tex/Nomenclatura.tex}
+\rhead[\fancyplain{}{\bfseries \scshape \leftmark}]{\fancyplain{}\bfseries{\thepage}}
+\lhead[\fancyplain{}{\bfseries \thepage}]{\fancyplain{}{\bfseries \scshape \chaptername\ \thechapter}}
+
 \input{tex/Fluidodinamica.tex}
 \input{tex/Foamer.tex}
 \input{tex/Impianti.tex}

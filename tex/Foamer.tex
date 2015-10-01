@@ -1,5 +1,5 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter{Applicazioni di schiumogeno per l'ottimizzazione della produzione degli idrocarburi}\thispagestyle{empty} 
+\chapter{Applicazioni di schiumogeno per l'ottimizzazione della produzione di gas naturale}\thispagestyle{empty} 
 \chaptermark{Applicazioni di schiumogeno}
 Per \textit{Gas Well Deliquification} o \textit{Gas Well Dewatering} (GWD) si intende l'insieme delle tecnologie e delle applicazioni utili alla rimozione di acqua o condensati in fase produttiva da un pozzo a gas. Nello specifico il concetto di GDW racchiude tutti gli strumenti utili nel combattere il fenomeno del \textit{liquid loading}, definito come l'accumulo di acqua in pozzo e l'impossibilità di rimuoverla. Le tecnologie impiegate per lo spiazzamento dei liquidi a fondo pozzo sono numerose e sono in continua evoluzione per garantire migliori performance e affidabilità. Nell'ultimo decennio gli schiumogeni sembrano rappresentare una scelta concreta per controllare il carico idrostatico di fondo pozzo e presentano notevoli vantaggi rispetto alle tecnologie già esistenti \parencite{stanculescu2014gwd}. In questo capitolo sono descritte le cause e le conseguenze del \textit{liquid loading} e le principali tecnologie impiegate oggi per la riduzione e controllo del battente idrostatico. Particolare attenzione è dedicata all'impiego di tensioattivi liquidi o \textit{foamer}, descrivendo le proprietà fisico-chimiche, le procedure operative per il loro impiego e controllo tramite l'uso di antischiuma o  \textit{defoamer}.
 
@@ -7,13 +7,13 @@ Per \textit{Gas Well Deliquification} o \textit{Gas Well Dewatering} (GWD) si in
 \subsection{Ciclo di vita di un pozzo a gas}
 Nel paragrafo \ref{sssec:verticali} si è discusso dei diversi regimi di flusso bifase per condotte verticali. Un pozzo a gas può presentare tutti i regimi di flusso: in \figref{fig:declinecurve} è possibile comprendere graficamente l'evoluzione del pozzo durante il suo ciclo di vita. La distribuzione delle varie fasi in pozzo si evolve nel coso della vita produttiva. Inizialmente il gas è fase dominante e il pozzo ha forza sufficiente per trascinare tutto il liquido presente sul fondo. Ad alte velocità superficiali del gas corrisponde un regime anulare misto: la fase liquida è interdispersa nella fase gassosa. Con il diminuire della velocità del gas nel tempo, la fase liquida comincia a precipitare e a depositarsi sul fondo, ostacolando la normale produzione di gas.
 
-\subsection{Problemi legati al liquid loading}
-Il liquid loading porta a un regime di flusso a slug e a una produzione di gas discontinua e inferiore. Se il gas ha energia sufficiente a rimuovere i liquidi presenti a fondo pozzo, la portata del gas risponde in modo corretto alla stima di produzione rispetto al tempo di vita del pozzo, definita tramite l'analisi della curva di declino (\textit{Decline Curve Analysis}, DCA), visibile sempre in \figref{fig:declinecurve}.
+\subsection{Problemi legati al \textit{liquid loading}}
+Il \textit{liquid loading} porta a un regime di flusso a \textit{slug} e a una produzione di gas discontinua e inferiore. Se il gas ha energia sufficiente a rimuovere i liquidi presenti a fondo pozzo, la portata del gas risponde in modo corretto alla stima di produzione rispetto al tempo di vita del pozzo, definita tramite l'analisi della curva di declino (\textit{Decline Curve Analysis}, DCA), visibile sempre in \figref{fig:declinecurve}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=.8\textwidth]{fig/foamer/declinecurve.eps}
-    \caption{Schematizzazione del ciclo di un pozzo a gas, combinata con l'analisi della curva di declino \parencite{lea2011gas}}
+    \caption{Schematizzazione del ciclo di un pozzo a gas, combinata con l'analisi della curva di declino \parencite{lea2011gas}.}
     \label{fig:declinecurve}
 \end{figure}
 
@@ -31,15 +31,15 @@ Nella maggior parte dei pozzi la produzione di gas è associata a produzione di 
 \end{itemize}
 
 \subsection{Velocità critica}
-La velocità terminale è definita come la velocità di caduta di un corpo libero (particelle liquide) in un mezzo fluido (gas naturale) sotto l'influenza della forza di gravità. La velocità critica è legata alla velocità terminale delle particelle di liquido e la differenza tra le due grandezze rappresenta l'incremento utile per lo spiazzamento del liquido dal pozzo. Il primo a creare un modello sperimentale inerente al trascinamento continuo di liquido fu \textcite{turner1969analysis}. L'equazione teorica per la velocità critica \(w_t\) per il trascinamento verticale di una goccia:
-\[w_t= 1,593\dfrac{\sigma{(\rho_L-\rho_G)}}{\rho_G^2}^{1/4} \qquad\textrm{[ft/sec]} \addtag \label{eq:turnerwc} \]
-dove \(\sigma\) è la tensione superficiale,\(\rho_G\) e \(rho_L\) sono la densità rispettivamente del gas e del liquido.\\
-Poiché in campo le condizioni variano molto rispetto al modello teorico, l'autore fornisce due equazioni relative al trascinamento di acqua (\(w_{c,W}\)) o condensati (\(w_{c,COND}\)), in funzione della pressione \(p\):
-\[w_{c,W} = 5,304 \dfrac{(67-0,0031p)^{1/4}}{\sqrt{0,0031p}}  \qquad\textrm{[ft/sec]} \label{eq:w_c,w} \addtag\]
-\[w_{c,COND} = 4,03 \dfrac{(45-0,0031p)^{1/4}}{\sqrt{0,0031p}}  \qquad\textrm{[ft/sec]} \label{eq:w_c,cond} \addtag\]
+La velocità terminale è definita come la velocità di caduta di un corpo libero (particelle liquide) in un mezzo fluido (gas naturale) sotto l'influenza della forza di gravità. La velocità critica è legata alla velocità terminale delle particelle di liquido e la differenza tra le due grandezze rappresenta l'incremento utile per lo spiazzamento del liquido dal pozzo. Il primo a creare un modello sperimentale inerente al trascinamento continuo di liquido fu \textcite{turner1969analysis}. L'equazione teorica per la velocità critica \(w_c\) per il trascinamento verticale di una goccia:
+\[w_c= 1,593\dfrac{\sigma{(\rho_l-\rho_g)}}{\rho_g^2}^{1/4} \qquad\textrm{[ft/sec]} \addtag \label{eq:turnerwc} \]
+dove \(\sigma\) è la tensione superficiale,\(\rho_g\) e \(rho_l\) sono la densità rispettivamente del gas e del liquido.\\
+Poiché in campo le condizioni variano molto rispetto al modello teorico, l'autore fornisce due equazioni relative al trascinamento di acqua (\(w_{c,w}\)) o condensati (\(w_{c,cond}\)), in funzione della pressione \(p\):
+\[w_{c,w} = 5,304 \dfrac{(67-0,0031p)^{1/4}}{\sqrt{0,0031p}}  \qquad\textrm{[ft/sec]} \label{eq:w_c,w} \addtag\]
+\[w_{c,cond} = 4,03 \dfrac{(45-0,0031p)^{1/4}}{\sqrt{0,0031p}}  \qquad\textrm{[ft/sec]} \label{eq:w_c,cond} \addtag\]
  Dalla \eqref{eq:w_c,w} e la \eqref{eq:w_c,cond} si ricava il valore della portata critica giornaliera:
-\[Q_{c,giorno}=\dfrac{3,06 \; w_c \; p \; A}{T \; Z}  \qquad \textrm{[MMft\ap{3}/giorno]} \addtag \]
-dove \(w_c\) fa riferimento o alla velocità critica per acqua o condensati. Nel caso in cui siano presenti sia acqua che condensati, per il calcolo di \(w_c\)si fa riferimento alla sola \eqref{eq:w_c,w}. Tutte i parametri e le variabili del modello sono espressi nel sistema consuetudinario statunitense. \\
+\[\dot{V}_{c,giorno}=\dfrac{3,06 \; w_c \; p \; A}{T \; Z_m}  \qquad \textrm{[MMft\ap{3}/giorno]} \addtag \]
+dove \(w_c\) fa riferimento o alla velocità critica per acqua o condensati. Nel caso in cui siano presenti sia acqua che condensati, per il calcolo di \(w_c\) si fa riferimento alla sola \eqref{eq:w_c,w}. Tutte i parametri e le variabili del modello sono espressi nel sistema consuetudinario statunitense. \\
 Negli anni successivi la ricerca ha portato alla creazione di ulteriori modelli sempre più raffinati: \textcite{coleman1991new} utilizza il modello di \citeauthor{turner1969analysis} ma lo convalida per pressioni di testa pozzo sopra i 35 bar, \textcite{li2001new} crea un modello basato sulla forma appiattita delle particelle liquide, \textcite{nosseir1997new} formula un modello che si adatta alle condizioni di flusso.
 
 \subsection{NODAL* analysis™}
@@ -53,22 +53,22 @@ La produttività del pozzo si ottiene dall'intersezione dell'IPR con la VLP. Il 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=.5\textwidth]{fig/foamer/ipr-tpr.eps}
-    \caption{Schematizzazione dell'analisi nodale combinata alla portata critica di trascinamento}
+    \caption{Schematizzazione dell'analisi nodale combinata alla portata critica di trascinamento.}
     \label{fig:ipr-tpr}
 \end{figure}
 
 
 \section[Sollevamento artificiale per GDW]{Sistemi di sollevamento artificiale per il Gas Well Deliquification}
-\sectionmark{Sollevamento artificiale per GDW}
+\sectionmark{Sollevamento artificiale per GDW} 
 L'industria del gas utilizza numerosi metodi per la rimozione di liquidi dai pozzi. Qui di seguito sono presentati i metodi più utilizzati e ormai consolidati nel tempo con particolare attenzione agli schiumogeni a cui è dedicata una sezione a parte. \textcite{oyewole2008artificial} classifica i sistemi di sollevamento artificiale in:
 \begin{itemize}
     \item \textbf{a energia del giacimento}: qui definiti  a energia interna, i sistemi non aumentano direttamente l'energia del giacimento, bensì agiscono sui parametri che caratterizzano il trascinamento del liquido in pozzo;
     \item \textbf{a energia esterna}: sistemi a fondo pozzo che agiscono indipendentemente dall'energia residua del giacimento.
 \end{itemize}
-Le \textit{velocity string}, i compressori, i \textit{plunger} e gli schiumogeni sono sistemi di sollevamento artificiale a energia interna, pompe e iniezione di fluidi sono invece sistemi a energia esterna.
+Le \textit{velocity string}, i compressori, i plunger e gli schiumogeni sono sistemi di sollevamento artificiale a energia interna, pompe e iniezione di fluidi sono invece sistemi a energia esterna.
 
 \subsection{Velocity string}
-La \textit{velocity string} è costituita da un tubino di produzione con diametro inferiore rispetto a quello già presente in pozzo. Per produzione costante, il restringimento della sezione di produzione provoca un aumento della velocità del flusso in condotta e il superamento del valore della velocità critica. L'applicazione può avvenire su un tratto specifico del pozzo (\figref{fig:velocitystring-fixed}) oppure su tutta la sua lunghezza (\figref{fig:velocitystring-long}).
+La \textit{velocity string} è costituita da un tubino di produzione con diametro inferiore rispetto a quello già presente in pozzo. Il restringimento della sezione di produzione provoca un aumento della velocità del flusso in condotta e il superamento del valore della velocità critica. L'applicazione può avvenire su un tratto specifico del pozzo (\figref{fig:velocitystring-fixed}) oppure su tutta la sua lunghezza (\figref{fig:velocitystring-long}).
 
 \begin{figure}[htbp]
 \centering
@@ -76,49 +76,49 @@ La \textit{velocity string} è costituita da un tubino di produzione con diametr
     {\makebox[0.4\textwidth]{\includegraphics[width=.15\textwidth]{fig/foamer/velocitystring/velocitystring-fixed.eps}} \label{fig:velocitystring-fixed}} \quad
     \subfloat[][Su tutto il pozzo]
     {\makebox[0.4\textwidth]{\includegraphics[width=.15\textwidth]{fig/foamer/velocitystring/velocitystring-long.eps}}\label{fig:velocitystring-long}}
-    \caption{Schema di applicazione della velocity string \parencite{arachman2004liquid}} 
+    \caption{Schema di applicazione della \textit{velocity string} \parencite{arachman2004liquid}.} 
     \label{fig:velocitystring}
 \end{figure}
 
-L'installazione della \textit{velocity string} è generalmente molto economica rispetto ad altre sistemi di sollevamento artificiale, visto che l'applicazione può avvenire anche tramite \textit{coiled tubing}, prodotti tubolari continui a sezione limitata, fabbricati in lunghezza e avvolti attorno a una bobina di raccolta \parencite{international2014introduction}. Tuttavia la progettazione deve avvenire con particolare cautela, visto che il restringimento della sezione di produzione si traduce non solo in termini di aumento di velocità, ma anche di aumento delle perdite di carico per attrito. La \textit{velocity string} non è considerata una soluzione definitiva per il GWD, dal momento che il dimensionamento ideale del tubino di produzione ausiliario cambia con l'evoluzione delle condizioni del giacimento.
+L'installazione della \textit{velocity string} è generalmente molto economica rispetto ad altri sistemi di sollevamento artificiale, visto che l'applicazione può avvenire anche tramite \textit{coiled tubing}\footnote{Prodotti tubolari continui a sezione limitata, fabbricati in lunghezza e avvolti attorno a una bobina di raccolta \parencite{international2014introduction}}. Tuttavia la progettazione deve avvenire con particolare cautela, visto che il restringimento della sezione di produzione si traduce non solo in termini di aumento di velocità, ma anche di aumento delle perdite di carico per attrito. La \textit{velocity string} non è considerata una soluzione definitiva per il GWD, dal momento che il dimensionamento ideale del tubino di produzione ausiliario cambia con l'evoluzione delle condizioni del giacimento.
 
 \subsection{Compressione}
-Possono essere impiegati dei compressori di testa pozzo per diminuire la pressione a testa pozzo. La modalità di compressione può essere a opera di un singolo compressore (\figref{fig:compressore}) o di un sistema di compressori posti in superficie. 
+Possono essere impiegati dei compressori di testa pozzo per diminuire la pressione in prossimità della superficie. La modalità di compressione può essere a opera di un singolo compressore (\figref{fig:compressore}) o di un sistema di più compressori.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{fig/foamer/compressore.eps}
-    \caption{Layout semplificato del GasJack™, copressore singolo utilizzato per operazioni di compressione della testa pozzo \parencite{garner2009backside}}
+    \caption{Layout semplificato del GasJack™, copressore singolo utilizzato per operazioni di compressione della testa pozzo \parencite{garner2009backside}.}
     \label{fig:compressore}
 \end{figure}
 
-Una minore pressione a testa pozzo porta all'aumento dell'afflusso di gas dal giacimento. L'aumento di portata è associato all'aumento della velocità del gas, raggiungendo così valori al di sopra della velocità critica. Il dimensionamento dell'impianto di compressione si basa sulla pressione di aspirazione e la pressione di mandata, ovvero dal rapporto di compressione. \'E importante tenere presente che una minima variazione delle pressioni di aspirazione o di mandata può aumentare in maniera significativa la potenza richiesta dal compressore. La compressione e la riduzione della pressione a testa pozzo sono generalmente le prime soluzioni impiegate per il sollevamento artificiale. L'installazione dei compressori può avvenire durante il ciclo di vita del pozzo senza evidenti segnali di \textit{liquid loading}: la diminuzione di pressione consente di lavorare in condizioni migliori, aumentando le performance generali e quindi la produzione di gas giornaliera. La compressione può anche considerarsi un sistema di sollevamento artificiale ausiliario: un compressore può interfacciarsi con altre soluzioni come agenti surfattanti, \textit{gas lift}, \textit{plunger}, \textit{beam pump}, ESP o \textit{velocity string}, aumentando in modo significativo le performance di \textit{liquid unloading}. 
+Una minore pressione a testa pozzo porta all'aumento dell'afflusso di gas dal giacimento. L'aumento di portata è associato all'aumento della velocità del gas, raggiungendo così valori al di sopra della velocità critica. Il dimensionamento dell'impianto di compressione si basa sulla pressione di aspirazione e la pressione di mandata, ovvero dal rapporto di compressione. \'E importante tenere presente che una minima variazione delle pressioni di aspirazione o di mandata può aumentare in maniera significativa la potenza richiesta dal compressore. La compressione e la riduzione della pressione a testa pozzo sono generalmente le prime soluzioni impiegate per il sollevamento artificiale. L'installazione dei compressori può avvenire durante il ciclo di vita del pozzo senza evidenti segnali di \textit{liquid loading}: la diminuzione di pressione consente di lavorare in condizioni migliori, aumentando le performance generali e quindi la produzione di gas giornaliera. La compressione può anche considerarsi un sistema di sollevamento artificiale ausiliario: un compressore può interfacciarsi con altre soluzioni come agenti surfattanti, \textit{gas lift}, plunger o \textit{velocity string}, aumentando in modo significativo l'efficacia di spiazzamento dei liquidi a fondo pozzo.
 
 \subsection{Plunger}
-I plunger sono dei dispositivi installati all'interno del pozzo per la rimozione meccanica di liquidi e altri agenti contaminanti. Il \textit{plunger} è un pistone tuffante che viaggia liberamente dal fondo pozzo alla superficie, spinto da una pressione che deve essere sufficiente a trascinare sia il dispositivo che i fluidi accumulati. La produzione di gas con l'installazione di un \textit{plunger} risulta discontinua, legata alla ciclicità dello strumento che deve percorre in entrambe le direzioni tutta la lunghezza del pozzo. Come si può vedere nella \figref{fig:conventionalplunger} l'applicazione di un \textit{plunger} in pozzo richiede determinata strumentazione di superficie (valvole) e di fondo pozzo (\textit{plunger} e meccanismo a molla). Una tipica installazione convenzionale è organizzata nel seguente modo:
+I plunger sono dei dispositivi installati all'interno del pozzo per la rimozione meccanica di liquidi e altri agenti contaminanti. Il plunger è un pistone tuffante che viaggia liberamente dal fondo pozzo alla superficie, spinto da una pressione che deve essere sufficiente a trascinare sia il dispositivo che i fluidi accumulati. La produzione di gas con l'installazione di un plunger risulta discontinua, legata alla ciclicità dello strumento che deve percorre in entrambe le direzioni tutta la lunghezza del pozzo. Come si può vedere nella \figref{fig:conventionalplunger} l'applicazione di un plunger in pozzo richiede determinata strumentazione di superficie (valvole) e di fondo pozzo (plunger e meccanismo a molla). Una tipica installazione convenzionale è organizzata nel seguente modo:
 
 \begin{itemize}
-    \item \textbf{\textit{bumper} a molla}, utile a ricevere il \textit{plunger} a fondo pozzo e evitare danni dovuti all'impatto a terra;
-    \item \textbf{ricevitore di superficie}, blocca il \textit{plunger} una volta giunto in superficie e consente il deflusso del gas in condotta;
+    \item \textbf{\textit{bumper} a molla}, utile a ricevere il plunger a fondo pozzo e evitare danni dovuti all'impatto a terra;
+    \item \textbf{ricevitore di superficie}, blocca il plunger una volta giunto in superficie e consente il deflusso del gas in condotta;
     \item \textbf{valvola motorizzata di superficie}, controllata elettronicamente, apre e chiude il pozzo quando necessario;
-    \item \textbf{sensore elettronico di superficie}, si attiva quando il \textit{plunger} giunge in superficie;
+    \item \textbf{sensore elettronico di superficie}, si attiva quando il plunger giunge in superficie;
     \item \textbf{controller elettronici}, con ciclicità impostata da operatore, gestisce tutte le operazioni di produzione e registra dati in continuo.
 \end{itemize}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{fig/foamer/plunger-installation.eps}
-    \caption{Tipica installazione di \textit{plunger} \parencite{lea2011gas}}
+    \caption{Tipica installazione di plunger \parencite{lea2011gas}.}
     \label{fig:plunger-installation}
 \end{figure}
 
-Come già detto, l'applicazione di un plunger convenzionale trasforma la produzione da continua a ciclica, caratterizzata quindi da \textit{shut-in} programmati per far tornare il \textit{plunger} alla posizione originaria e permettere al pozzo, in caso di bisogno, di raggiungere una pressione tale da poter trascinare il \textit{plunger} assieme alla colonna di fluido presente. La \figref{fig:conventionalplunger} mostra un generico ciclo di produzione convenzionale:
+Come già detto, l'applicazione di un plunger convenzionale trasforma la produzione da continua a ciclica, caratterizzata quindi da \textit{shut-in} programmati per far tornare il plunger alla posizione originaria e permettere al pozzo, in caso di bisogno, di raggiungere una pressione tale da poter trascinare il plunger assieme alla colonna di fluido presente. La \figref{fig:conventionalplunger} mostra un generico ciclo di produzione convenzionale:
 \begin{enumerate}
-    \item[(a)] \textit{plunger} a fondo pozzo con liquido al di sopra, valvola di superficie chiusa;
-    \item[(b)] apertura della valvola di superficie e risalita del \textit{plunger} assieme alla colonna liquida;
+    \item[(a)] plunger a fondo pozzo con liquido al di sopra, valvola di superficie chiusa;
+    \item[(b)] apertura della valvola di superficie e risalita del plunger assieme alla colonna liquida;
     \item[(c)] fase produttiva del pozzo in assenza di cadute di pressione dovute a \textit{liquid loading};
     \item[(d)] riaccumulo di fluido a fondo pozzo;
-    \item[(e)] chiusura del pozzo e discesa del \textit{plunger} a fondo pozzo.
+    \item[(e)] chiusura del pozzo e discesa del plunger a fondo pozzo.
 \end{enumerate}
 
 \begin{figure}[htbp]
@@ -133,12 +133,12 @@ Come già detto, l'applicazione di un plunger convenzionale trasforma la produzi
     {\centering \includegraphics[height=.3\textheight]{fig/foamer/plunger-conventional/conventionalplunger-D.eps} \label{fig:plunger-conventional-D}} \qquad \qquad
     \subfloat[][]
     {\centering \includegraphics[height=.3\textheight]{fig/foamer/plunger-conventional/conventionalplunger-E.eps} \label{fig:plunger-conventional-E} }
-    \caption{Ciclo di un plunger convenzionale}
+    \caption{Ciclo di un plunger convenzionale.}
     \label{fig:conventionalplunger}
 \end{figure}
 
-In commercio esistono varie tipologie di \textit{plunger} e variano a seconda della geometria e degli inserti installati sulla superficie esterna (e.g. spazzole per la pulizia del tubino di produzione). Negli ultimi anni sono nati nuovi sistemi definiti a ciclo libero o in continuo, che permettono la discesa senza interrompere la produzione. Numerosi sono i brevetti e i prodotti che offrono \textit{plunger-lift} in continuo: possono essere dotati di una valvola interna (e.g. Weatherford RapidFlo™, FB FreeCycle™ o McClain™) oppure a due pezzi (e.g. Peacemaker™, composto da una sfera e un manicotto). La \figref{fig:plunger} mostra alcune tipologie presenti sul mercato.\\
-L'applicazione di \textit{plunger} in pozzo per il sollevamento artificiale richiede un investimento iniziale relativamente basso, ma dei costi operativi che possono incidere col tempo e portare a un aumento imprevisto del costo di produzione del gas. Gli investimenti iniziali indiretti possono però incidere fortemente sulla scelta del \textit{plunger}: la variazione dei volumi di gas e liquido rende necessaria una nuova valutazione circa il dimensionamento degli impianti di trattamento a valle del pozzo, i costi iniziali possono essere quindi legati per esempio all'installazione di un nuovo separatore.
+In commercio esistono varie tipologie di plunger e variano a seconda della geometria e degli inserti installati sulla superficie esterna (e.g. spazzole per la pulizia del tubino di produzione). Negli ultimi anni sono nati nuovi sistemi definiti a ciclo libero o in continuo, che permettono la discesa senza interrompere la produzione. Numerosi sono i brevetti e i prodotti che offrono \textit{plunger-lift} in continuo: possono essere dotati di una valvola interna (e.g. Weatherford RapidFlo™, FB FreeCycle™ o McClain™) oppure a due pezzi (e.g. Peacemaker™, composto da una sfera e un manicotto). La \figref{fig:plunger} mostra alcune tipologie presenti sul mercato.\\
+L'applicazione di plunger in pozzo per il sollevamento artificiale richiede un investimento iniziale relativamente basso, ma dei costi operativi che possono incidere col tempo e portare a un aumento imprevisto del costo di produzione del gas. Gli investimenti iniziali indiretti possono decidere la scelta dell'installazione del plunger: la variazione dei volumi di gas e liquido rende necessaria una nuova valutazione circa il dimensionamento degli impianti di trattamento a valle del pozzo, i costi iniziali possono essere quindi legati per esempio all'installazione di un nuovo separatore.
 
 \begin{figure}[htbp]
 \centering
@@ -150,19 +150,19 @@ L'applicazione di \textit{plunger} in pozzo per il sollevamento artificiale rich
     {\makebox[0.2\textwidth]{\includegraphics[height=.25\textheight]{fig/foamer/plunger/plunger-fixedbrush.eps}} \label{fig:plunger-fixedbrush}} \quad
     \subfloat[][RapidFlo™]
     {\makebox[0.25\textwidth]{\includegraphics[height=.25\textheight]{fig/foamer/plunger/plunger-rapidflo.eps}} \label{fig:plunger-rapidflo} }
-\caption{Principali tipologie di \textit{plunger} proposte da Weatherford \parencite{weatherford2008brochure}}
+\caption{Principali tipologie di plunger proposte da Weatherford \parencite{weatherford2008brochure}.}
 \label{fig:plunger}
 \end{figure}
 
 \subsection{Altri sistemi di sollevamento artificiale per deliquification} \subsectionmark{Altri sistemi per GWD}
 Alcune tecnologie per l'attenuazione del battente idrostatico in pozzo nascono da applicazioni pensate in origine per il sollevamento artificiale di giacimenti a olio. Questi sistemi sono stati riadattati per il trascinamento dell'acqua a fondo pozzo o per agevolare l'afflusso del gas in pozzo. I sistemi presentati nel paragrafo corrente sono tutti a energia esterna.
 \paragraph{Gas lift}
-Il \textit{gas lift} per \textit{deliquification} consiste nell'iniezione di gas da una fonte esterna al pozzo a una certa profondità. Nel campo dell'olio il gas iniettato a fondo pozzo diminuisce il peso della colonna, facilitando così il flusso in condotta. Nel caso dei pozzi a gas viene fatto fluire gas a fondo pozzo sia per diminuire la densità della colonna idrostatica, sia per aumentare la produzione di gas effettiva, quindi l'efficacia di trascinamento della colonna da parte della corrente gassosa. Questo sistema gode il vantaggio di non provocare significative variazioni delle condizioni di produttività e riesce a lavorare anche in pozzi deviate. L'applicazione purtroppo dipende fortemente dalla presenza di una sorgente di gas ad alta pressione, rappresentata da un pozzo nella zona limitrofe o a cui però sono associati dei costi operativi.
+Il \textit{gas lift} per \textit{deliquification} consiste nell'iniezione di gas da una fonte esterna al pozzo a una certa profondità. Nel campo dell'olio il gas iniettato a fondo pozzo diminuisce il peso della colonna, facilitando così il flusso in condotta. Nel caso dei pozzi a gas viene fatto fluire gas a fondo pozzo sia per diminuire la densità della colonna idrostatica, sia per aumentare la produzione di gas effettiva, quindi l'efficacia di trascinamento della colonna da parte della corrente gassosa. Questo sistema gode il vantaggio di non provocare significative variazioni delle condizioni di produttività e riesce a lavorare anche in pozzi deviati. L'applicazione purtroppo dipende fortemente dalla presenza di una sorgente di gas ad alta pressione, rappresentata da un pozzo nella zona limitrofe o o all'installazione di compressori per il rilancio di gas a fondo pozzo.
 \paragraph{Sistemi di pompaggio}
-Le pompe a cavalletto (\textit{Beam Pump}, BP), impiegate in modo massiccio per il sollevamento artificiale per giacimenti a olio, rappresentano il sistema di pompaggio più comune anche nel GWD. Generalmente i sistemi di pompaggio spingono la colonna idrostatica lungo il tubino di produzione (o un tubino ausiliario, come un \textit{coiled tubing} installato a posteriori) e il gas prodotto viene fatto fluire nell'annulus. Altri sistemi di pompe utilizzate anche in questo campo sono le pompe elettriche sommerse (\textit{Electrical Submersible Pump},   ESP), pompe a cavità progressiva (\textit{Progressing Cavity Pump}, PCP) e pompe idrauliche (a pistone o \textit{jet pump}). Le pompe vengono generalmente impiegate quando la pressione a fondo pozzo è relativamente bassa e quando il rapporto gas/liquido non è sufficiente da garantire lo spiazzamento della colonna idrostatica tramite i sistemi a energia interna. Le pompe non possono operare in presenza di gas, perciò vanno opportunamente collocate al di sotto degli spari, in modo da ottenere una buona separazione del liquido dal gas. La vita media delle pompe dipende fortemente dagli agenti di erosione, è importante capire se la produzione di liquidi e gas comporta anche la produzione di sabbia.
+Le pompe a cavalletto (\textit{Beam Pump}, BP), impiegate in modo massiccio per il sollevamento artificiale per giacimenti a olio, rappresentano il sistema di pompaggio più comune anche nel GWD. Generalmente i sistemi di pompaggio spingono la colonna idrostatica lungo il tubino di produzione (o un tubino ausiliario, come un \textit{coiled tubing} installato a posteriori) e il gas prodotto viene fatto fluire nell'annulus. Altri sistemi di pompe utilizzate anche in questo campo sono le pompe elettriche sommerse (\textit{Electrical Submersible Pump}, ESP), pompe a cavità progressiva (\textit{Progressing Cavity Pump}, PCP) e pompe idrauliche (a pistone o \textit{jet pump}). Le pompe vengono generalmente impiegate quando la pressione a fondo pozzo è relativamente bassa e quando il rapporto gas/liquido non è sufficiente da garantire lo spiazzamento della colonna idrostatica tramite i sistemi a energia interna. Le pompe non possono operare in presenza di gas, perciò vanno opportunamente collocate al di sotto degli spari, in modo da ottenere una buona separazione del liquido dal gas. La vita media delle pompe dipende fortemente dagli agenti di erosione, è importante capire se la produzione di liquidi e gas comporta anche la produzione di sabbia.
 
 \section{Schiumogeni}
-L'impiego di schiumogeni nell'industria petrolifera è vario e ormai consolidato nel tempo. Come visibile in \tabref{tab:surfactantapplications} i tensioattivi sono impiegati in tutte le fasi di recupero del greggio e nell'industria di processo, dalle perforazioni, iniezioni in giacimento, produzione, al trasporto in condotta onshore e offshore.
+L'impiego di schiumogeni nell'industria petrolifera è vario e ormai consolidato nel tempo. Come visibile in \tabref{tab:surfactantapplications} i tensioattivi sono impiegati in tutte le fasi di recupero del greggio e nell'industria di processo, dalle perforazioni, iniezioni in giacimento, produzione, al trasporto in condotta \textit{onshore} e \textit{offshore}.
 
 \begin{table}[htbp]
     \small
@@ -183,7 +183,7 @@ Emulsioni per la stimolazione pozzo                                        & O/W
 Flottazione di miscele a olio e sabbie bituminose                          & O/W                    \\
 Fluidi di perforazione emulsionati (fanghi a base olio)                    & W/O                    \\
 Emulsione di catrame e bitumi                                              & O/W                    \\
-Emulsioni in situ per EOR                                                  & O/W                    \\
+Emulsioni in situ per EOR (\textit{Enhanced Oil Recovery})                  & O/W                    \\
 Emulsione di carburanti di trasporto (70\% olio pesante)                   & O/W                    \\
 Schiume per il controllo della mobilità del gas                            & G/W                    \\
 Sospensioni per fluidi (fanghi) di perforazione                            & S/W                    \\
@@ -192,17 +192,16 @@ Impasti cementizi in pozzo                                                 & S/W
 Solidi di produzione a testa pozzo nel recupero primario dell'olio pesante & S/W                    \\ \hline
 \end{tabular}
 \end{table}
-
 I tensioattivi sono utilizzati anche in pozzo per mitigare i fenomeni di \textit{liquid loading} e la tecnica ha ormai acquisito notevole importanza nel GWD. I tensioattivi sono introdotti in pozzo in tre modi:
 \begin{itemize}
-    \item \textit{\textbf{schiumogeni in stick}}: barre solide di sapone introdotte lungo il tubino di produzione senza la necessità di interrompere la produzione;
+    \item \textbf{schiumogeni in \textit{stick}}: barre solide di sapone introdotte lungo il tubino di produzione senza la necessità di interrompere la produzione;
     \item \textbf{schiumogeni liquidi in-batch}: viene chiuso il pozzo e viene immesso lungo il tubino di produzione un certo volume di surfactanti seguiti da una soluzione salina, per poi riaprire il pozzo dopo aver atteso la discesa del surfactante;
     \item \textbf{schiumogeni liquidi in continuo}: una \textit{capillary string}, collegata a una pompa dosatrice, viene calata lungo il pozzo fino all'altezza degli spari, lo schiumogeno liquido viene iniettato durante la produzione di gas.
 \end{itemize}
- Gli \textit{stick} sono facili da utilizzare, non comportano modifiche di impianto e rappresentano il metodo più economico. Tuttavia interessano solo la parte superiore della colonna liquida e rimuovono parzialmente l'acqua a fondo pozzo; inoltre, essendo solubili in acqua, non agiscono in modo appropriato in presenza di idrocarburi condensati sull'interfaccia gas-liquido \parencite{bolding2007resurrecting}. Gli schiumogeni liquidi o anche detti \textit{foamer}, pur avendo costi maggiori e richiedendo maggiori accorgimenti per il loro utilizzo, sono molto più performanti, hanno la capacità di interessare tutta la colonna idrostatica e non sono influenzati dalla presenza di idrocarburi condensati (gli schiumogeni in-batch sono spinti da un \textit{chaser}, gli schiumogeni in continuo agiscono alla base del pozzo). Nel seguente paragrafo si farà riferimento ai soli \textit{foamer}, descrivendo i principi e le procedure operative per il sollevamento artificiale tramite tensioattivi liquidi.
+ Gli \textit{stick} sono facili da utilizzare, non comportano modifiche di impianto e rappresentano il metodo più economico. Tuttavia interessano solo la parte superiore della colonna liquida e rimuovono parzialmente l'acqua a fondo pozzo; inoltre, essendo solubili in acqua, non agiscono in modo appropriato in presenza di idrocarburi condensati sull'interfaccia gas-liquido \parencite{bolding2007resurrecting}. Gli schiumogeni liquidi o anche detti \textit{foamer}, pur avendo costi maggiori e richiedendo maggiori accorgimenti per il loro utilizzo, sono molto più performanti, hanno la capacità di interessare tutta la colonna idrostatica e non sono influenzati dalla presenza di idrocarburi condensati (gli schiumogeni in-batch sono spinti da un \textit{chaser}, gli schiumogeni in continuo agiscono alla base del pozzo). Nel seguente paragrafo si farà riferimento ai soli \textit{foamer} liquidi, descrivendo i principi e le procedure operative per il sollevamento artificiale tramite tensioattivi liquidi.
  
 \subsection{Tensioattivi}
-I tensioattivi, surfactanti o agenti attivi di superficie sono composti organici composti al massimo da un gruppo, testa, liofilo e un gruppo, coda, liofobico \figref{fig:sls}. Si parla di testa idrofila e coda idrofoba se il solvente nel quale deve essere utilizzato il tensioattivo è acqua o a base acqua. In termini chimico-fisici la struttura di un surfactante è costituita da un gruppo polare e da un gruppo apolare . La \figref{fig:sls} mostra un esempio di struttura chimica di un tensioattivo con in evidenza il gruppo polare e apolare.
+I tensioattivi, surfactanti o agenti attivi di superficie sono composti organici composti al massimo da un gruppo liofilo (testa) e un gruppo liofobico (coda), come visibile in \figref{fig:sls}. Si parla di testa idrofila e coda idrofoba se il solvente nel quale deve essere utilizzato il tensioattivo è acqua o a base acqua. In termini chimico-fisici la struttura di un surfactante è costituita da un gruppo polare e da un gruppo apolare. La \figref{fig:sls} mostra un esempio di struttura chimica di un tensioattivo con in evidenza il gruppo polare e apolare.
 
 \begin{figure}[htbp]
     \centering
@@ -233,9 +232,9 @@ I surfactanti sono classificati in base alla carica del gruppo polare (\figref{f
 \label{fig:surfactants-classification}
 \end{figure}
 
-Si consideri un volume d'acqua a contatto con aria dove vengono disciolti dei tensioattivi. I surfactanti, in prossimità della superficie di contatto delle due fasi, si orientano in modo tale che il gruppo polare sia adsorbito dalla fase liquida e il gruppo apolare permanga nella fase gassosa. Tale adsorbimento porta alla diminuzione dell'energia libera di Gibbs o entalpia libera, quindi alla riduzione della tensione superficiali tra le due fasi. Allo stesso modo i tensioattivi possono diminuire la tensione superficiale dell'acqua a contatto con una generica fase olio o di un solido, aumentando la bagnabilità di quest'ultimo.
+Si consideri un volume d'acqua a contatto con aria dove vengono disciolti dei tensioattivi. I surfactanti, in prossimità della superficie di contatto delle due fasi, si orientano in modo tale che il gruppo polare sia adsorbito dalla fase liquida e il gruppo apolare permanga nella fase gassosa. Tale adsorbimento porta alla diminuzione dell'energia libera di Gibbs o entalpia libera, quindi alla riduzione della tensione superficiale tra le due fasi. Allo stesso modo i tensioattivi possono diminuire la tensione superficiale dell'acqua a contatto con una generica fase olio o di un solido, aumentando la bagnabilità di quest'ultimo.
 
-Un altro modo per limitare il contatto del gruppo apolare con l'acqua è la creazione di strutture bi- o tridimensionali, capaci di racchiudere i gruppi apolari internamente e mettendo a contatto con l'acqua i gruppi polari (\figref{fig:micelle}). Queste strutture sono definite micelle, sono il frutto dei fenomeni di aggregazione dei tensioattivi e possono avere forma lamellare (in questo caso i surfactanti sono molecole anfifiliche o anfifobiche), sferica o cilindrica.  Tali aggregati supramolecolari tendono a crearsi una volta superato una certa concentrazione del surfactante in soluzione, definita concentrazione micellare critica (CMC). La complessità di tali strutture dipende dalla concentrazione in acqua e dalla specie chimica dell'agente attivo di superficie.
+Un altro modo per limitare il contatto del gruppo apolare con l'acqua è la creazione di strutture bi- o tridimensionali, capaci di racchiudere i gruppi apolari internamente e mettendo a contatto con l'acqua i gruppi polari (\figref{fig:micelle}). Queste strutture sono definite micelle, sono il frutto dei fenomeni di aggregazione dei tensioattivi e possono avere forma lamellare (in questo caso i surfactanti sono molecole anfifiliche o anfifobiche), sferica o cilindrica.  Tali aggregati supramolecolari tendono a crearsi una volta superata una certa concentrazione del surfactante in soluzione, definita concentrazione micellare critica (CMC). La complessità di tali strutture dipende dalla concentrazione in acqua e dalla specie chimica dell'agente attivo di superficie.
 
 \begin{figure}[htbp]
     \centering
@@ -270,7 +269,7 @@ Le bolle appena generate all'interno del liquidi, dalle piccole dimensioni e pre
     \label{fig:lamella}
 \end{figure}
 
-Il processo di drenaggio non è però sufficiente ad abbattere la schiuma. Si raggiunge un punto in cui il drenaggio non è più possibile poiché le alte concentrazioni di tensioattivi sono tali che le forze di repulsione elettrostatica e sterica impediscono un'ulteriore contrazione delle lamelle. La schiuma è quindi definita stabile quando si instaura uno stato di equilibrio tra il drenaggio per gravità e le forze di repulsione tra molecole.
+Il processo di drenaggio non è però sufficiente ad abbattere la schiuma. Si raggiunge un punto in cui il drenaggio non è più possibile poiché le alte concentrazioni di tensioattivi sono tali che le forze di repulsione elettrostatica e sterica impediscono un'ulteriore contrazione delle lamelle. La schiuma è quindi definita stabile quando si instaura uno stato di equilibrio tra il drenaggio per gravità e le forze di repulsione tra molecole.\\
 Le sottili lamelle di schiuma, oltre ad essere stabili, sono molto elastiche. Un aumento della superficie delle lamella, provocato dalla deformazione della bolla, porta alla riduzione locale della concentrazione di surfactanti e di conseguenza a un aumento locale della tensione superficiale della lamella stessa. L'elasticità di Gibbs-Marangoni consente quindi alla schiuma, se sollecitata dall'esterno, di tornare alla configurazione geometrica iniziale.
 
 \subsection{Antischiuma}
@@ -279,14 +278,14 @@ Gli antischiuma o \textit{defoamer} sono agenti chimici capaci di penetrare la s
     \item insolubilità nella soluzione generatrice di schiuma;
     \item bassa tensione superficiale;
     \item coefficiente di penetrazione (\(E\)) positivo;
-    \item coefficiente di espansione (\(S\)) o coefficiente di \textit{bridging} positivo oppure caratteristiche di \textit{dewetting}.
+    \item coefficiente di espansione (\(\Sigma\)) o coefficiente di \textit{bridging} positivo oppure caratteristiche di \textit{dewetting}.
 \end{itemize}
 
 L'insolubilità del \textit{defoamer} non deve essere assoluta: l'antischiuma deve pur sempre essere sufficientemente compatibile con il mezzo da trattare. 
 Come già detto il \textit{defoamer} deve penetrare la lamella in modo da disgregare le bolle della schiuma. Un prerequisito fondamentale è quindi la capacita di penetrare il film di tensioattivi. La capacità penetrante dell'antischiuma è espressa fisicamente dal coefficiente di penetrazione \(E\):
-\[E = \sigma_{L/G} + \sigma_{L/D} + \sigma_{D/G} \label{eq:penetration} \]
-dove \(\sigma\) rappresenta la tensione superficiale e fa riferimento alla fase liquido-gas (\(L/G\)), liquido-defoamer (\(L/D\)) e \textit{defoamer}-gas (\(D/G\)). Solo se \(E\) è positivo, l'antischiuma è capace di permanere sulla parete della lamella, altrimenti rimane all'interno della soluzione liquida. Giunta sul film di surfactanti,  la gocciolina di \textit{defoamer} può espandersi su tutta la superficie della lamella, formando così delle lenti. Il risultato è una diminuzione della stabilità e flessibilità della lamella che porta così alla disgregazione della bolla. Il processo di espansione porta allo scorrimento del fluido nella lamella lungo le direzioni di espansione del \textit{defoamer}. Il fenomeno è conosciuto come flusso di Marangoni e provoca un restringimento dello strato della lamella, destabilizzando ulteriormente la struttura della bolla. Il coefficiente di espansione \(S\) esprime le capacità espandenti dell'antischiuma:
-\[S = \sigma_{L/G} - \sigma_{L/D} - \sigma_{D/G} \label{eq:spreading} \]
+\[E = \sigma_{l/g} + \sigma_{l/d} + \sigma_{d/g} \label{eq:penetration} \]
+dove \(\sigma\) rappresenta la tensione superficiale e fa riferimento alla fase liquido-gas (\(l/g\)), liquido-defoamer (\(l/d\)) e \textit{defoamer}-gas (\(d/g\)). Solo se \(E\) è positivo, l'antischiuma è capace di permanere sulla parete della lamella, altrimenti rimane all'interno della soluzione liquida. Giunta sul film di surfactanti,  la gocciolina di \textit{defoamer} può espandersi su tutta la superficie della lamella, formando così delle lenti. Il risultato è una diminuzione della stabilità e flessibilità della lamella che porta così alla disgregazione della bolla. Il processo di espansione porta allo scorrimento del fluido nella lamella lungo le direzioni di espansione del \textit{defoamer}. Il fenomeno è conosciuto come flusso di Marangoni e provoca un restringimento dello strato della lamella, destabilizzando ulteriormente la struttura della bolla. Il coefficiente di espansione \(\Sigma\) esprime le capacità espandenti dell'antischiuma:
+\[\Sigma = \sigma_{l/g} - \sigma_{l/d} - \sigma_{d/g} \label{eq:spreading} \]
 
 \begin{figure}[htbp]
     \centering
@@ -305,7 +304,7 @@ I \textit{defoamer} con insufficienti capacità espandenti possono trattare la s
 \end{figure}
 
 Ciò è possibile se la lamella è sufficientemente ristretta grazie al drenaggio per gravità oppure se le bolle sono sufficientemente grandi per via del fenomeno di coalescenza. Raggiunta l'altra parete della lamella, la rottura della lamella può avvenire per allungamento o \textit{dewetting}. I due meccanismi sono possibili se il coefficiente di \textit{bridging} \(B\) è positivo:
-\[B = (\sigma_{L/G})^2 + (\sigma_{L/D})^2 - (\sigma_{D/G})^2 \label{eq:bridging} \]
+\[B = (\sigma_{l/g})^2 + (\sigma_{l/d})^2 - (\sigma_{d/g})^2 \label{eq:bridging} \]
 
 Se l'antischiuma agisce tramite \textit{dewetting}, la soluzione liquida non riesce a entrare totalmente in contatto con le goccioline di \textit{defoamer}. Di conseguenza, il fenomeno di \textit{dewetting} porta al collasso delle bolle generate dai tensioattivi. Anche gli agenti solidi portano al fenomeno di \textit{dewetting}.
 Se il processo di rimozione di schiuma avviene tramite l'allungamento delle lamelle, le goccioline di antischiuma agiscono sul punto più debole della lamella per portarla alla lacerazione e quindi alla destabilizzazione della configurazione totale della schiuma.
@@ -321,7 +320,7 @@ Attualmente le classi di \textit{defoamer} in commercio sono:
 \begin{itemize}
     \item \textbf{siliconici}: i polisilossani e suoi affini (e.g. polidimetilsilossani) appartengono al gruppo di antischiuma più comunemente utilizzati, sono polimeri costruiti su un gruppo silossano, dove al centro della molecola si alternano atomi di silicio e ossigeno, hanno grandi capacità di espansione e efficacia a largo spettro;
     \item \textbf{oli minerali}: generalmente idrocarburi alifatici e non aromatici per motivi ambientali, queste molecole apolari hanno buone capacità di espansione, hanno problemi in ambienti molto alcalini e ad alte temperature;
-    \item \textbf{a base di olio vegetale}: o anche definiti antischiuma VOC-free, presentano proprietà molto simili agli oli minerali con il vantaggio di utilizzare una risorsa rinnovabile, solitamente con l'aggiunta di siliconi e cere sintetiche;
+    \item \textbf{a base di olio vegetale}: o anche definiti antischiuma VOC-free (\textit{Volatile Organic Compounds}), presentano proprietà molto simili agli oli minerali con il vantaggio di utilizzare una risorsa rinnovabile, solitamente con l'aggiunta di siliconi e cere sintetiche;
     \item \textbf{a base di polimeri}: possono essere acidi grassi modificati, polieteri o ammine modificate, la polarità di queste molecole può essere cambiata lavorando la struttura chimica e, grazie alla loro grande compatibilità, sono impiegati laddove non è possibile impiegare altri \textit{defoamer}.
 \end{itemize}
 
